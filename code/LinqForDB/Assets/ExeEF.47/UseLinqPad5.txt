@@ -1,2 +1,0 @@
-This file is compiled to .NEt 4.7
-Use LinqPad 5 to work with this version.

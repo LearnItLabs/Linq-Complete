@@ -1,0 +1,14 @@
+When creating a connection using the LINQPad type data context
+
+1. Choose the Data\Assemblies\DataDepot folder.
+2. Open the appsettings.json file.
+3. Change the DataSource ="your install location"
+
+{
+"ConnectionStrings": {
+	"ToursConnection": "Data Source=D:\\repos\\LearnItLabs\\Linq-Complete\\code\\Data\\Sqlite\\Tours.sqlite",
+	"NorthwindConnection": "Data Source=D:\\repos\\LearnItLabs\\Linq-Complete\\code\\Data\\Sqlite\\northwind.sqlite",
+	"BigStarConnection": "Data Source=D:\\repos\\LearnItLabs\\Linq-Complete\\code\\Data\\Sqlite\\BigStar.sqlite"
+}
+}
+

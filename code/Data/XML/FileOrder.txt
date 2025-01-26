@@ -1,0 +1,10 @@
+BigStar.xml
+BigStar-WithSchema.xml
+BigStar-WithPrefix.xml
+BigStar-MissingXML.xml
+CardSimple.xml
+CardSimple-Copy.xml
+Northwind.xml
+WebColorsA.xml
+WebColorsB.xml
+WebColorsSimple.xml

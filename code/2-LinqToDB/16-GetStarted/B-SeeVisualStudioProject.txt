@@ -1,0 +1,4 @@
+Some of the examples are in the Visual Studio folder
+
+LinqForDB\VisualStudio\DataDepot
+

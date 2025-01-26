@@ -1,0 +1,7 @@
+Unable to connect to (localdb)\MSSQLLocalDB - Due to trigger execution
+
+My solution, from an Admin Visual Studio CMD prompt:
+
+SqlLocalDB stop MSSQLLocalDB -k
+SqlLocalDB delete MSSQLLocalDB
+SqlLocalDB create MSSQLLocalDB -s

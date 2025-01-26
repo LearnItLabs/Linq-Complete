@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Northwind>
+  <Customers>
+    <Customer>
+      <CustomerID>ALFKI</CustomerID>
+      <CompanyName>Alfreds Futterkiste</CompanyName>
+      <Country>Germany</Country>
+      <Orders>
+        <Order>
+          <OrderID>1</OrderID>
+          <Freight>25.00</Freight>
+        </Order>
+        <Order>
+          <OrderID>2</OrderID>
+          <Freight>45.00</Freight>
+        </Order>
+      </Orders>
+    </Customer>
+    <Customer>
+      <CustomerID>ANATR</CustomerID>
+      <CompanyName>Ana Trujillo Emparedados y Helados</CompanyName>
+      <Country>Mexico</Country>
+      <Orders>
+        <Order>
+          <OrderID>3</OrderID>
+          <Freight>65.00</Freight>
+        </Order>
+        <Order>
+          <OrderID>4</OrderID>
+          <Freight>75.00</Freight>
+        </Order>
+      </Orders>
+    </Customer>
+    <Customer>
+      <CustomerID>ANTON</CustomerID>
+      <CompanyName>Antonio Moreno Taquería</CompanyName>
+      <Country>Mexico</Country>
+      <Orders>
+        <Order>
+          <OrderID>5</OrderID>
+          <Freight>55.00</Freight>
+        </Order>
+        <Order>
+          <OrderID>6</OrderID>
+          <Freight>60.00</Freight>
+        </Order>
+      </Orders>
+    </Customer>
+    <Customer>
+      <CustomerID>BERGS</CustomerID>
+      <CompanyName>Berglunds snabbköp</CompanyName>
+      <Country>Sweden</Country>
+      <Orders>
+        <Order>
+          <OrderID>7</OrderID>
+          <Freight>80.00</Freight>
+        </Order>
+        <Order>
+          <OrderID>8</OrderID>
+          <Freight>12.00</Freight>
+        </Order>
+      </Orders>
+    </Customer>
+    <Customer>
+      <CustomerID>BLAUS</CustomerID>
+      <CompanyName>Blauer See Delikatessen</CompanyName>
+      <Country>Germany</Country>
+      <Orders>
+        <Order>
+          <OrderID>9</OrderID>
+          <Freight>70.00</Freight>
+        </Order>
+        <Order>
+          <OrderID>10</OrderID>
+          <Freight>85.00</Freight>
+        </Order>
+      </Orders>
+    </Customer>
+  </Customers>
+</Northwind>
