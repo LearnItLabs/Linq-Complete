@@ -2,7 +2,7 @@
 
 #region Load BigStar.xml file
 var root = Path.GetDirectoryName(Util.CurrentQueryPath);
-var upPath = @"\..\";
+var upPath = @"\..\..\Data\XML\";
 var path = @"BigStar.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion

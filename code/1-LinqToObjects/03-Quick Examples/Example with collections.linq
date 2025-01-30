@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\VisualStudio\ColorLib\bin\Debug\net8.0\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\1-LinqToObjects\VisualStudio\ColorLib\bin\Debug\net8.0\ColorLib.dll</Reference>
+  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 

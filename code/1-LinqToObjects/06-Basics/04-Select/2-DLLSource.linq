@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // A new datasource
@@ -9,4 +9,4 @@
 
 // be sure and add a reference to the DLL (Press F4 in LINQPad)
 
-CourseLib.ColorSource.GetColors().Dump();
+	ColorLib.ColorSource.WebColors.Dump();

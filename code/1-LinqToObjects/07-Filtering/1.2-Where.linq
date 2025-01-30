@@ -1,11 +1,11 @@
 <Query Kind="Program">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 void Main()
 {
 
-	var q = from color in CourseLib.ColorSource.GetColors()
+	var q = from color in ColorLib.ColorSource.WebColors
 
 					where IsColorTotalLessThan(color, 1.5)
 					select new
@@ -25,7 +25,7 @@ void Main()
 }
 
 // Define other methods and classes here
-public bool IsColorTotalLessThan(CourseLib.WebColor color, double maxValue)
+public bool IsColorTotalLessThan(ColorLib.WebColor color, double maxValue)
 {
 	var total = color.BluePercent + color.GreenPercent + color.RedPercent;
 

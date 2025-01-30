@@ -5,7 +5,7 @@
 // Big Star uses data in XML files
 	
 	var root = Path.GetDirectoryName(Util.CurrentQueryPath);
-var upPath = @"\..\..\Data\XML\";
+  var upPath = @"\..\..\Data\XML\";
 	var path = @"BigStar.xml";
 	var loaded = XElement.Load(root + upPath + path);
 	

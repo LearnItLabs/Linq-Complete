@@ -3,7 +3,7 @@
 #region Load BigStarCollectibles-MissingXML xml file
 var root = Path.GetDirectoryName(Util.CurrentQueryPath);
 var upPath = @"\..\..\Data\XML\";
-var path = @"BigStarCollectibles-MissingXML.xml";
+var path = @"BigStar-MissingXML.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 

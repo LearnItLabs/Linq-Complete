@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // The Where clause filters the sequence based on a predicate function
@@ -8,7 +8,7 @@
 // to determine what to return in filtered sequence
 
 
-var q = from color in CourseLib.ColorSource.GetColors()
+var q = from color in ColorLib.ColorSource.WebColors
 				where (false)
 				select color;
 				

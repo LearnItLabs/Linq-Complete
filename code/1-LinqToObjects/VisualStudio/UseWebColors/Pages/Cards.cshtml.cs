@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using CardLib.Cards;
 using ColorLib;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -10,19 +11,19 @@ using Microsoft.Extensions.Logging;
 
 namespace UseWebColors.Pages
 {
-	public class IndexModel : PageModel
+	public class CardsModel : PageModel
 	{
 		private readonly ILogger<IndexModel> _logger;
-		public IndexModel()
+		public CardsModel()
 		{
 			
-			this.WebColors = ColorLib.ColorSource.WebColors;
+			this.Cards = CardLib.CardSource.Cards;
 			
 		}
 
 		public void OnPost()
 		{
-			WebColors = ColorLib.ColorSource.WebColors.Where(x=>x.ColorFamily == CurrentColorFamily).ToList();
+			Cards = CardLib.CardSource.Cards.Where(x=>x.CardFamily == CurrentCardFamily).ToList();
 		}
 		public void OnGet()
 		{
@@ -33,10 +34,10 @@ namespace UseWebColors.Pages
 			//				select color;
 
 		}
-		public List<WebColor>	WebColors { get; set; }
-		public ColorFamily ColorFamilies { get; set; }
+		public List<CardLib.Cards.Card>	Cards { get; set; }
+		public CardFamily CardFamilies { get; set; }
 		[BindProperty]
-		public ColorFamily CurrentColorFamily { get; set; }
+		public CardFamily CurrentCardFamily { get; set; }
 
 	}
 }

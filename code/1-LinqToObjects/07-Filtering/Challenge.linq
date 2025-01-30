@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\1-LinqToObjects\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
 // challenge
@@ -18,4 +18,4 @@
 
 
 // use this data source
-// CourseLib.ColorSource.GetColors()
+// ColorLib.ColorSource.WebColors

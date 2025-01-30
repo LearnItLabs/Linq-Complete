@@ -9,6 +9,7 @@
 // result = operation (d, result)
 // result = operation (e, result)
 
+// Aggregate works like fold in Haskell/ML/F#.
 
 	var numbers = new List<int> { 50, 4, 10, 3, 90, 8, -60, 7, 20, 5 };
 

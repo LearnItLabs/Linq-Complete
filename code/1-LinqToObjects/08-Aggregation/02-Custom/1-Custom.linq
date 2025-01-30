@@ -1,7 +1,7 @@
 <Query Kind="Statements" />
 
 // define a function to call from custom aggregator
-
+// Aggregate works like fold in Haskell/ML/F#.
 	var setA =	Enumerable.Range(1, 20).Where(x => x % 3 == 0);
 
 

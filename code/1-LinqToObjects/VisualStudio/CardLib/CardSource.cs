@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace CardLib {
-public 	class CardSource
-	{
+public 	class CardSource {
+		public static List<Card> Cards { get { return GetCards(); } }
 		private static List<Card> _cards;
 		 static CardSource()
 		{
@@ -14,6 +14,7 @@ public 	class CardSource
 			_cards.Add(new Monster
 			{
 				Name = "Mingle",
+				CardFamily = CardFamily.Monster,
 				EyeCount = 2,
 				ListPrice = 5.99M,
 				AskingPrice = 15.95M,
@@ -26,6 +27,7 @@ public 	class CardSource
 			_cards.Add(new Monster
 			{
 				Name = "Yodel",
+				CardFamily = CardFamily.Monster,
 				EyeCount = 2,
 				ListPrice = 5.99M,
 				AskingPrice = 6.95M,
@@ -40,7 +42,7 @@ public 	class CardSource
 			{
 
 				Name = "Squido",
-
+				CardFamily =	CardFamily.Monster,
 				EyeCount = 2,
 				ListPrice = 5.99M,
 				AskingPrice = 6.95M,
@@ -55,6 +57,7 @@ public 	class CardSource
 			_cards.Add(new Monster
 			{
 				Name = "Spook",
+				CardFamily = CardFamily.Monster,
 				ListPrice = 5.99M,
 				AskingPrice = 23.95M,
 				Description = "Cracking code and battling hackers is Spook's forte. She holds a prominent position as Head of Cyber Security for the Department of Monster Defense, where she thwarts attacks on government computer systems as often as she blinks. When not at work, Spook delights in serving up a fright at haunted mansions and ghost walks.",
@@ -68,7 +71,7 @@ public 	class CardSource
 				Name = "Blade",
 				ListPrice = 5.99M,
 				AskingPrice = 42.50M,
-			
+				CardFamily = CardFamily.Robot,
 				Description = "Blade freelances as a mobile app developer and has built some of the most popular mobile apps used in modern cyborg society, including the award-winning Battery Watcher ",
 				BatteryLevel= 87,
 			});
@@ -78,12 +81,12 @@ public 	class CardSource
 				Name = "Drift",
 				ListPrice = 5.99M,
 				AskingPrice = 17.95M,
-				
+				CardFamily = CardFamily.Robot,
 				Description = "After years of everyone saying her head was in the clouds, Drift found her calling as a software engineer developing a well-known cloud solution for the computing giant, Red30 Tech. After work, she prefers to unwind by catching wind in her sail and paragliding high in the sky.",
 				BatteryLevel= 96,
 			});
 		}
-		public static List<Card> GetCards()
+		private static List<Card> GetCards()
 		{
 			
 				return _cards;

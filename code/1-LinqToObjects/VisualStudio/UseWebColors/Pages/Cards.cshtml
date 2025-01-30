@@ -1,0 +1,40 @@
+﻿@page
+@model CardsModel
+@{
+	ViewData["Title"] = "Cards page";
+}
+
+
+<div class="text-center">
+	<h1 class="display-4">Use Cards from LINQ</h1>
+	<form method="post" class="col-6">
+		<div class="form-row">
+			<div class="form-group">
+				<label asp-for="@Model.Cards" class="label "></label>
+				<select asp-items="@Html.GetEnumSelectList<CardLib.Cards.CardFamily>()" asp-for="CurrentCardFamily" ></select>
+				<button class="btn btn-primary">Change card Family</button>
+			</div>
+			
+		</div>
+	</form>
+
+	<table class="table  table-bordered table-condensed">
+		@foreach (var card in Model.Cards)
+		{
+
+			<tr >
+				<td>@card.Name</td>
+				<td>@card.CardFamily</td>
+				<td><i>@card.Description  </i>    </td>
+				<td>@card.AskingPrice      </td>
+				<td>
+					@*<a class="btn btn-outline-primary"
+						asp-page="ShowTourStop"
+						asp-route-stopnumber='@tourStop.StopNumber'>Details...</a>*@
+				</td>
+			</tr>
+		}
+
+	</table>
+
+</div>

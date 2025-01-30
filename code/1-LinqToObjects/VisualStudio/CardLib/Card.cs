@@ -12,6 +12,7 @@ namespace CardLib.Cards
 	{
 		public string Name { get; set; }
 		public string Description { get; set; }
+		public CardFamily CardFamily { get; set; }
 		public decimal ListPrice { get; set; }
 		public decimal AskingPrice { get; set; }
 		public decimal Discount { get { return AskingPrice * .45M; } }
@@ -19,7 +20,7 @@ namespace CardLib.Cards
 
 		public string TypeName
 		{
-			get { return this.GetType().FullName; }
+			get { return this.GetType().Name; }
 		}
 	}
 	public class Creature : Card
@@ -36,14 +37,11 @@ namespace CardLib.Cards
 	}
 
 
-	public class Robot : Card , ISerializable
+	public class Robot : Card 
 	{
 
 		public decimal BatteryLevel { get; set; }
-		public void GetObjectData(SerializationInfo info, StreamingContext context)
-		{
-			throw new NotImplementedException();
-		}
+	
 	}
 	public class Cyborg : Robot
 	{
@@ -51,4 +49,10 @@ namespace CardLib.Cards
 	}
 	public class Android : Robot
 	{ }
+
+	public enum CardFamily { 
+	
+	Monster,
+	Robot
+	}
 }

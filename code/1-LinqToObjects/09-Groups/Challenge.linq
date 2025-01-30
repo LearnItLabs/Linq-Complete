@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // challenge
@@ -23,7 +23,7 @@
 // GreenPercent and BluePercent.
 // Suggestion, look at using anonymous type for the group criteria
 // 
-var colors = CourseLib.ColorSource.GetColors();
+var colors = ColorLib.ColorSource.WebColors;
 
 var q = from color in colors
 				group color by color.HSL.Saturation;

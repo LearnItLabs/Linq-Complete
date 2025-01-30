@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // GroupBy returns a sequence of groups
@@ -10,7 +10,7 @@
 
 // Let's start with the GroupBy extension method
 
-	var colors = CourseLib.ColorSource.GetColors();
+	var colors = ColorLib.ColorSource.WebColors;
 	var groupedResult = colors.GroupBy(c => c.ColorFamily );
 
 	groupedResult.Dump();

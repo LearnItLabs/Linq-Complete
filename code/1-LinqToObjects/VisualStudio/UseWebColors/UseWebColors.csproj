@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CardLib\CardLib.csproj" />
     <ProjectReference Include="..\ColorLib\ColorLib.csproj" />
   </ItemGroup>
 
