@@ -4,11 +4,11 @@
 </Query>
 
 // OfType operator is used to return only the elements of a specified type.
-var q = from card in CardLib.CardSource.Cards
-				select card;
-				
-		
-var monstersOnly = q.OfType<CardLib.Cards.Monster>();
-//monstersOnly.Select(c => new {c.Name, c.ListPrice, c.TypeName}).Dump();
-//q.OfType<ISerializable>().Dump();
-q.Dump();
+	var q = from card in CardLib.CardSource.Cards
+					select card;
+					
+			
+	var monstersOnly = q.OfType<CardLib.Cards.Monster>();
+	//monstersOnly.Select(c => new {c.Name, c.ListPrice, c.TypeName}).Dump();
+	//q.OfType<ISerializable>().Dump();
+	q.Dump();
