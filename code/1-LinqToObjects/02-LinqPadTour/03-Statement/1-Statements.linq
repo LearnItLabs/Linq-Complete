@@ -9,3 +9,5 @@ bool isBig = x > 1000;
 string isBigString = isBig ? "Big Number" : "Small number";
 
 // you decide how to output to the results window!
+
+Console.WriteLine(isBig);
