@@ -1,19 +1,18 @@
 <Query Kind="Statements" />
 
-// Dump() is an extension method
-// Created by the LINQPad team
+// Console.Write, Console.WriteLine are familiar method
+// LINQPad intercepts the output from these methods and 
+// redirects it to the 'Results' panel.
 
-// Outputs formatted data to the results window
+// LinqPad converts the output to HTML for the results panel.
 
-	int x = 65;
-	bool isLargeNumber = x > 1000;
-	string isLargeResult = isLargeNumber ? "Large Number" : "Small number";
+// Dump() is an LINQPad extension method/
+// a better choice to output to results.
 
-	x.Dump();
+var greeting = "hello";
 
-	//// add header
-	//x.Dump("X value");
-	//
-	//isLargeNumber.Dump ("isLargeNumber");
-	//
-	//isLargeResult.Dump("isLargeResult");
+Console.WriteLine(greeting);
+
+greeting.Dump();
+
+".Dump() is easier to read, and has more customizable output".Dump();

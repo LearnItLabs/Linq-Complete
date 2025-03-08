@@ -1,7 +1,7 @@
 <Query Kind="Statements" />
 
 
-var colors = new List<string> {"purple, orange, red, green, yellow"};
+var colors = new List<string> {"purple", "orange", "red", "green", "yellow"};
 colors.Dump();
 
 var colorValues = new Dictionary<string, string>();
