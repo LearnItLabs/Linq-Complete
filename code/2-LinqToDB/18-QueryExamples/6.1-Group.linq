@@ -15,22 +15,22 @@
       <EFProvider>Microsoft.EntityFrameworkCore.SqlServer</EFProvider>
     </DriverData>
   </Connection>
-  <Output>DataGrids</Output>
   <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
-// Where clause filters the number of rows returned 
-// Select clause (aka projection) filters the number of columns returned
 
-Customers.Count().Dump("# rows in Customers");
-var q1 = from c in Customers
-				where c.City.StartsWith ("S")
-				select c;
-				
-// check the generated SQL, this gets all columns
-q1.Dump ();
 
-var q2 = from c in Customers
-				 where c.City.StartsWith ("S")
-				 select new {c.CompanyName, c.Address, c.City};
-q2.Dump();
+	var q1 = from p in Products
+					 select new {p.ProductName, p.UnitPrice};
+		q1.Dump();
+
+	var q2 = from p in Products
+						 group p by p.ProductName.Substring(0,1) into g
+						 select g;			 
+	q2.Dump();
+
+	var q3 = from p in Products
+					 select new {p.ProductName, p.UnitPrice} into pGroup
+					 group pGroup by pGroup.ProductName.Substring(0, 1) into g
+					 select g;
+	q3.Dump();

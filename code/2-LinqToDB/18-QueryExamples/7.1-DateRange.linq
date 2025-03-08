@@ -15,19 +15,24 @@
       <EFProvider>Microsoft.EntityFrameworkCore.SqlServer</EFProvider>
     </DriverData>
   </Connection>
+  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
-// The DB joins are defined in the EF mapping
-// In the entity classes they are represented as Navigation properties.
-// Navigation properties provide a way to navigate an association between two entity types 
-// They allow you to navigate and manage relationships in both directions
+// get orders in date range
 
-// this simplifies common LINQ queries.
+	TimeSpan thirtyDays = TimeSpan.FromDays(30);
 
+	// get an order
+	var q1 = from o in Orders
+			 where o.OrderID == 10250
+			select new {o.OrderID, o.OrderDate, o.ShipName};
 
+	q1.Take(1).Dump();
 
-var q2 = from o in OrderDetails
-					where o.Order.CustomerID =="ISLAT"
-					select o;
-					
-q2.Dump();
+	var originalDate = q1.First().OrderDate;
+	var futureDate = originalDate + thirtyDays;
+	var q2= from o in Orders
+			where o.OrderDate > originalDate & o.OrderDate < futureDate
+			select new {o.OrderID, o.OrderDate, o.ShipName};
+
+	q2.Dump();

@@ -15,22 +15,19 @@
       <EFProvider>Microsoft.EntityFrameworkCore.SqlServer</EFProvider>
     </DriverData>
   </Connection>
-  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
+// The DB joins are defined in the EF mapping
+// In the entity classes they are represented as Navigation properties.
+// Navigation properties provide a way to navigate an association between two entity types 
+// They allow you to navigate and manage relationships in both directions
+
+// this simplifies common LINQ queries.
 
 
-var q1 = from p in Products
-				 select new {p.ProductName, p.UnitPrice};
-	q1.Dump();
 
-var q2 = from p in Products
-					 group p by p.ProductName.Substring(0,1) into g
-					 select g;			 
+	var q2 = from o in OrderDetails
+						where o.Order.CustomerID =="ISLAT"
+						select o;
+					
 q2.Dump();
-
-var q3 = from p in Products
-				 select new {p.ProductName, p.UnitPrice} into pGroup
-				 group pGroup by pGroup.ProductName.Substring(0, 1) into g
-				 select g;
-q3.Dump();

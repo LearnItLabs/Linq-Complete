@@ -18,13 +18,21 @@
   <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
-// group by ship country
+
+//  use results of a query as arguments to another query
 
 
-var q = from o in Orders
-				group o by o.ShipCountry into shipGroup
-				select new { shipGroup.Key, Total = shipGroup.Sum(o => o.Freight) } into totalItem
-				orderby totalItem.Total, totalItem.Key
-				select new { TotalShipCost = totalItem.Total, Country = totalItem.Key };
+	var q1 = from p in Products
+					 where p.UnitPrice > 90
+					 select p.ProductID;
 
-q.Dump("Orders grouped by ship country showing total:");
+	q1.Dump();
+
+	OrderDetails.Take(10).Dump();
+
+	var productIds= q1.ToList();
+	var q2 = from o in OrderDetails
+					
+					 where productIds.Contains(o.Product.ProductID)
+					 select o;
+	q2.Dump();

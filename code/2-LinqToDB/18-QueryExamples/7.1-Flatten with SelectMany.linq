@@ -18,21 +18,14 @@
   <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
-// get orders in date range
+// SelectMany flattens a one-many relationship
+// or saying it another way , it can ungroup nested sequences
 
-TimeSpan thirtyDays = TimeSpan.FromDays(30);
 
-// get an order
-var q1 = from o in Orders
-		 where o.OrderID == 10250
-		select new {o.OrderID, o.OrderDate, o.ShipName};
+	Regions.Dump();
+	var q1 = from r in Regions
+					  select r.Territories;
+	q1.Dump("4 hashset collections in result");
+	var q2 = Regions.SelectMany(r =>r.Territories);
 
-q1.Take(1).Dump();
-
-var originalDate = q1.First().OrderDate;
-var futureDate = originalDate + thirtyDays;
-var q2= from o in Orders
-		where o.OrderDate > originalDate & o.OrderDate < futureDate
-		select new {o.OrderID, o.OrderDate, o.ShipName};
-
-q2.Dump();
+	q2.Dump("Flattened to a single DbQuery");

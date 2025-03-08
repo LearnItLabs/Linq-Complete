@@ -15,17 +15,20 @@
       <EFProvider>Microsoft.EntityFrameworkCore.SqlServer</EFProvider>
     </DriverData>
   </Connection>
-  <Namespace>System.Data.Entity</Namespace>
+  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
-// The DB joins are defined in the EF mapping
-// this simplifies common queries.
+// use Take/Skip to get less rows without a where clause
+// Take: Returns contiguous elements from the start of a sequence.
+// Skip: Bypasses elements in a sequence and then returns the remaining elements.
+	var q1 = from p in Products
+					 orderby p.ProductID
+					 select new {p.ProductID, p.ProductName, p.UnitPrice};
+					 
+	var count = q1.Count();
 
+	count.Dump("Products count");
 
-
-var q2 = from o in OrderDetails
-				 where o.Order.CustomerID == "ISLAT"
-				 select new {o.Order.Customer.CompanyName, o.Order.OrderDate,
-				 o.Product.ProductName, Employee= o.Order.Employee.FirstName + " " + o.Order.Employee.LastName };
-					
-q2.Take (10).Dump();
+	var pageSize = 5;
+	q1.Take(pageSize).Dump("First page");
+	q1.Skip(pageSize).Take (pageSize).Dump("Next page");

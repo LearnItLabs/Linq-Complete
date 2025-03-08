@@ -18,14 +18,13 @@
   <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
-// SelectMany flattens a one-many relationship
-// or saying it another way , it can ungroup nested sequences
+// group by ship country
 
 
-Regions.Dump();
-var q1 = from r in Regions
-				  select r.Territories;
-q1.Dump("4 hashset collections in result");
-var q2 = Regions.SelectMany(r =>r.Territories);
+	var q = from o in Orders
+					group o by o.ShipCountry into shipGroup
+					select new { shipGroup.Key, Total = shipGroup.Sum(o => o.Freight) } into totalItem
+					orderby totalItem.Total, totalItem.Key
+					select new { TotalShipCost = totalItem.Total, Country = totalItem.Key };
 
-q2.Dump("Flattened to a single DbQuery");
+	q.Dump("Orders grouped by ship country showing total:");
