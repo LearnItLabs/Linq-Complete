@@ -2,11 +2,11 @@
   <Reference>&lt;RuntimeDirectory&gt;\System.Linq.dll</Reference>
 </Query>
 
-// A Query consists of a source (sequence) and
-// and at least one Query Operator
+// A query consists of a source (sequence) and
+// and at least one query operator.
 
-// All the Query Operators are implemented as extension methods
-// and are in the Enumerable class.
+// All query operators are implemented as extension methods  
+// and are defined in the Enumerable class.
 
 var a = Assembly.Load("System.Linq");
 

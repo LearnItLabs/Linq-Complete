@@ -1,22 +1,23 @@
 <Query Kind="Statements" />
 
-// deferred execution with extension methods.
+// Demonstrating deferred execution with extension methods
 var colors = new List<string>() {"Blue", "Crimson", "Brown", "Caramel",
 								"Copper","Orange" };
 
-
+// Define a query using Where (not executed yet).
 var q = colors.Where(c => c.StartsWith("C"));
 
-// run the query
+// Run the query
 
 q.Dump("first run");
 
+// Add a new color to the list
 colors.Add ("Coral");
 
 q.Dump("second run");
 
 
-// modify the query
+// modify the query by adding ordering
 
 var q2 = q.OrderBy(c => c);
 

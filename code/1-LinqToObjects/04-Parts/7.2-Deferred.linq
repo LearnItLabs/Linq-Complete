@@ -5,20 +5,19 @@ var colors = new List<string>() {"Blue", "Crimson", "Brown", "Caramel",
 
 
 
-
 var searchLetter = "";
-// potential query
+// Define a potential query (not executed yet).
 var q = from c in colors
 		where c.StartsWith(searchLetter)
 		select c;
 
-// change the search letter
+// Change the search letter
 searchLetter = "C";
 
-// run the query, what do you see?
+// Run the query, what do you see?
 q.Dump("what do you see?");
 
-// add a color to the list
+// Add a new color to the list
 colors.Add("Coral");
 
 // run the query again, what do you see?

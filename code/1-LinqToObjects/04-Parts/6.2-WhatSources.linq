@@ -1,18 +1,18 @@
 <Query Kind="Statements" />
 
-// LINQ to objects works on types
-// that Implement IEnumerable<T>.
+// LINQ to Objects works with types that implement IEnumerable<T>.
 //
 // Arrays receive special treatment from the CLR.
-// Arrays implement IEnumerable, not IEnumerable<T>
+// They implement IEnumerable, but not IEnumerable<T> directly.
 
 // But for any single-dimensional, zero-lower-bound array, 
 // the CLR modifies it to: 
 // - Inherit from Array. 
 // - Implement IEnumerable<T>, ICollection<T>, and IList<T>.
 
-// The implementation details are not important however,
-// because arrays are queryable.
+// The implementation details aren't crucial
+// what matters is that 
+// arrays are fully queryable using LINQ.
 
 Double[] array = new Double[] { 4.4, 2.2, 6.6 };
 

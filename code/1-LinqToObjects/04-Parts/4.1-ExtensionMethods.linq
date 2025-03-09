@@ -5,10 +5,10 @@ var colors = new List<string>
 		   "White", "Black", "Blue" ,"Bronze"};
 colors.Dump("Original List");
 
-
+// Static method sytax.
 // var w = Enumerable.Where(colors, c => c.StartsWith("B"));
 
-// call with extension method syntax
+// Call with extension method syntaxx
 var w = colors.Where(c => c.StartsWith("B"));
 
 w.Dump();

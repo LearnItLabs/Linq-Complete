@@ -13,7 +13,7 @@ var q2 = from color in q1
 
 q2.Dump();
 
-// use Count on Query Expression
+// use Count on query expression
 
 var q3 = (from color in colors
 		  where color.StartsWith("G")
