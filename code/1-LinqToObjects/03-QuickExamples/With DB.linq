@@ -1,4 +1,4 @@
-<Query Kind="SQL">
+<Query Kind="Statements">
   <Connection>
     <ID>54bf9502-9daf-4093-88e8-7177c12aaaaa</ID>
     <NamingService>2</NamingService>
@@ -15,4 +15,16 @@
   </Connection>
 </Query>
 
-Select * from Artist
+Genres.Count().Dump("Row count");
+
+var q1 = from g in Genres
+				 where g.Tracks.Count() < 30
+				 select g;
+				 
+				 q1.DumpTell();
+
+var q2 = from g in Genres
+				 where g.Tracks.Count() < 30
+				 select new { g.GenreId, TrackCount = g.Tracks.Count(), g.Name, g.Tracks };
+
+q2.DumpTell();
