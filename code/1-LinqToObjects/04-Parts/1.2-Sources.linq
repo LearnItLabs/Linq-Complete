@@ -5,7 +5,7 @@
 // show all types that implement 
 // the IEnumerable<T> (LINQ) interface 
 
-//var a = Assembly.Load("mscorlib"); // .NET Framewok
+// var a = Assembly.Load("mscorlib"); // .NET Framewok
 var a = Assembly.Load("System.Private.CoreLib"); // .NET core and .NET
 var q = from t in a.GetExportedTypes()
 				from i in t.GetInterfaces()
