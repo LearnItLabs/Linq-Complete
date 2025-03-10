@@ -4,7 +4,7 @@
 
 
 // The WebColors property is a List<WebColor>
-// List<T> implements IEnumberable, so we can query the data.
+// List<T> implements IEnumerable, so we can query the data.
 
 // Phase 1 : Get/initialize the data source.
 var webColors = ColorLib.ColorSource.WebColors;
