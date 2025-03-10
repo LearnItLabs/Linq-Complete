@@ -6,14 +6,12 @@
 // The WebColors property is a List<WebColor>
 // List<T> implements IEnumberable, so we can query the data.
 
-// Phase 1 : Get/initialize the data source
+// Phase 1 : Get/initialize the data source.
 var webColors = ColorLib.ColorSource.WebColors;
 
 
-
-
-// Phase 2: Write the query code
-// This is using a query expression
+// Phase 2: Write the query code.
+// This is using a query expression.
 var q = from color in webColors
 				where (color.ColorFamily == ColorLib.ColorFamily.Purple) // filter
 
@@ -27,9 +25,9 @@ var q = from color in webColors
 					GreenAmount = color.GreenValue
 				};
 
-// Phase 3 : Run the query
+// Phase 3 : Run the query.
 q.Dump();
 
-// this is using the query operator directly
+// this is using the query operator directly.
 webColors.Count().Dump("Total colors");
 
