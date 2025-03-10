@@ -3,7 +3,7 @@
 </Query>
 
 // show all types that implement 
-// the IEnumerable (LINQ) interface 
+// the IEnumerable<T> (LINQ) interface 
 
 //var a = Assembly.Load("mscorlib"); // .NET Framewok
 var a = Assembly.Load("System.Private.CoreLib"); // .NET core and .NET
