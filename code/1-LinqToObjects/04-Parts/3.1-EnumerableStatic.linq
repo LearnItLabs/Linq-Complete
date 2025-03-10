@@ -13,11 +13,10 @@ colors.Dump("Original List");
 var w = Enumerable.Where(colors, c => c.StartsWith("B"));
 
 // run the query 
-
-foreach (var element in w)
-{
-	Console.WriteLine (element);
-}
+//foreach (var element in w)
+//{
+//	Console.WriteLine (element);
+//}
 
 // run the query
 w.Dump("Use Where method");
