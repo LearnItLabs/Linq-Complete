@@ -2,12 +2,14 @@
 
 // more types that implement IEnumerable
 
-var st = new Stack<bool>();
-st.Push(true);
-st.Push(true);
-st.Push(false);
+var myBools = new Stack<bool>();
+myBools.Push(true);
+myBools.Push(false);
+myBools.Push(true);
+myBools.Push(false);
 
-var q4 = from s in st
+var q4 = from s in myBools
+			orderby s
 		 select s;
 
 q4.Dump();
