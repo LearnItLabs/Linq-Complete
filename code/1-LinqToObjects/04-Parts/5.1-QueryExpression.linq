@@ -1,10 +1,5 @@
 <Query Kind="Statements" />
 
-	
-	var colors = new List<string>
-			{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
-			   "White", "Black", "Blue" ,"Bronze"};
-
 	var numbers = new List<int> { 2, 4, 6, 8, 100, 200, 300, 1, 3, 5, 7, 400 };
 	// start with 
 	// from varname in sequence
