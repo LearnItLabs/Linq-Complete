@@ -2,23 +2,20 @@
 
 // Demonstrating deferred execution with extension methods
 var colors = new List<string>() {"Blue", "Crimson", "Brown", "Caramel",
-								"Copper","Orange" };
+																"Copper","Orange" };
 
-// Define a query using Where (not executed yet).
-var q = colors.Where(c => c.StartsWith("C"));
+var searchLetter = "B";
 
-// Run the query
+// Define a potential query (not executed yet).
+var q = from c in colors
+				where c.StartsWith(searchLetter)
+				select c;
 
-q.Dump("first run");
+// change the contents of the List<string>
+	colors.Remove("Blue");
+	colors.Add ("Beige");
 
-// Add a new color to the list
-colors.Add ("Coral");
+// Run the query, what do you see?
+q.Dump("What do you see?");
 
-q.Dump("second run");
-
-
-// modify the query by adding ordering
-
-var q2 = q.OrderBy(c => c);
-
-q2.Dump("third run");
+// Since the query ran after list was updated...
