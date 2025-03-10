@@ -2,7 +2,7 @@
 
 var colors = new List<string>
 		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
-		   "White", "Black", "Blue" ,"Bronze"};
+		   "White", "Black", "Blue" ,"Bronze", "Olive"};
 colors.Dump("Original List");
 
 // Static method sytax.
@@ -19,3 +19,5 @@ var a = colors.Last().Dump();
 
 // pipeline
 var b = colors.Where(c => c.StartsWith("B")).Last();
+
+b.Dump();
