@@ -4,27 +4,12 @@
 	// start with 
 	// from varname in sequence
 
-	var q1 = from n in numbers
+	var qs1 = from n in numbers
 			 			select n;
+						
+	var qs2 =  numbers.Select(n =>n );
+	var qs3 = Enumerable.Select(numbers,n => n);
 
-	q1.Dump("Simple pass through query");
+	qs1.Dump("Simple pass through query");
 
-	var q2 = from n in numbers
-			 orderby n descending
-			 select n;
 
-	q2.Dump("add OrderBy clause");
-
-	// add another clause
-	var q3 = from n in numbers
-			 orderby n 
-			 where n % 100 ==0
-			 select n;
-
-	q3.Dump("add where clause");
-
-	var q4 = from n in numbers
-			 orderby n
-			 where n % 100 == 0
-			 select (n + 50);
-	q4.Dump("change select clause");
