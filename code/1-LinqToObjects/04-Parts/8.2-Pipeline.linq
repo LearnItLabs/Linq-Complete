@@ -1,28 +1,25 @@
-<Query Kind="Statements" />
+<Query Kind="Statements">
+  <Reference>&lt;RuntimeDirectory&gt;\System.Linq.dll</Reference>
+</Query>
 
-var colors = new List<string>
-		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
-			 "White", "Black", "Blue" ,"Bronze", "Bronze"};
+// Pipeline candidates
+// are methods that return IEnumerable or IOrderedEnumerable
+
+// The key distinction is whether the method continues the LINQ query pipeline or terminates it.
+// .OrderBy continues the pipeline
+// .Count would terminate the pipeline
+var a = Assembly.Load("System.Linq");
+
+var q1 = from method in typeof(System.Linq.Enumerable).GetMethods()
+				 let cleanData = new {MethodName = method.Name, ReturnType = method.ReturnType.Name.Replace("`1", "<T> ")}
+				
+					group method by cleanData.ReturnType
+					into methodGroup 
+					orderby methodGroup.Key
+				 select new { Name = methodGroup.Key, Methods = methodGroup.Select(m => m.Name) };
+
+q1.Dump("All Enumerable method overloads and their return type.");
 
 
-// write pipeline example
 
-// Where returns IEnumerable<T>
 
-var pipe1 = colors.Where(c => c.Length > 5);
-
-// OrderBy returns IOrderedEnumerable<T>
-var pipe2 = pipe1.OrderBy(p => p);
-
-pipe2.Dump("ordered and filtered");
-
-// Distinct returns IEnumerable<T>
-var pipe3 = pipe2.Distinct();
-
-pipe3.Dump("Remove duplicates");
-
-// or like this
-
-var q = colors.Where(c => c.Length > 5).OrderBy(c => c).Distinct();
-
-q.Dump("Single line pipeline");
