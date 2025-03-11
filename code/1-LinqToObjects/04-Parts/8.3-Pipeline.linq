@@ -4,7 +4,7 @@
 
 var colors = new List<string>
 		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
-			 "White", "Black", "Blue" ,"Bronze", "Bronze"};
+			 "White", "Black", "Blue" ,"Bronze", "Bronze", "Yellow", "Blue"};
 
 
 // write pipeline example
