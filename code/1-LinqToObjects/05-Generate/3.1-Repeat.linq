@@ -14,7 +14,7 @@ for (int i = 0; i < 120; i++)
 manyThrees.Dump("Many Threes");
 
 // The Functional Approach:
-// A more concise and functional way to achieve the same resul
+// A more concise and functional way to achieve the same result.
 
 var manyFives = Enumerable.Repeat<int>(5, 200);
 

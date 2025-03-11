@@ -11,19 +11,19 @@ var colorsSource = new List<string> { "Red", "Orange" };
 
 IEnumerable<string> colorsChecked ;
 colorsChecked= Enumerable.DefaultIfEmpty<string>(colorsSource);
-colorsChecked.Dump();
+colorsChecked.Dump("Has strings");
 colorsSource.Remove("Red");
 
 colorsSource.Remove("Orange");
-
+colorsSource.Dump("Empty sequence.");
 
 // When the source enumerable has no entries, 
 // return an enumerable with a single value; the default value.
 colorsChecked= Enumerable.DefaultIfEmpty<string>(colorsSource);
 
-colorsChecked.Dump();
+colorsChecked.Dump("Default value added to sequence.");
 
 colorsChecked = Enumerable.DefaultIfEmpty<string>(colorsSource,"Transparent"); // use another value
 
-colorsChecked.Dump();
+colorsChecked.Dump("My value added to sequence.");
 
