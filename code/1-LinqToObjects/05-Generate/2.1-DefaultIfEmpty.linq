@@ -10,18 +10,18 @@ var numbersSource = new List<int> { 1, 3 };
 
 IEnumerable<int> numbersChecked ;
 numbersChecked= Enumerable.DefaultIfEmpty<int>(numbersSource);
-numbersChecked.Dump();
+numbersChecked.Dump("Has numbers");
 numbersSource.Add(5);
 numbersSource.RemoveAll(n => n > 0);
-
-
+;
+numbersSource.Dump("Empty sequence.");
 // When the source enumerable has no entries, 
 // return an enumerable with a single value; the default value.
 numbersChecked= Enumerable.DefaultIfEmpty<int>(numbersSource);
 
-numbersChecked.Dump();
+numbersChecked.Dump("Default value added to sequence.");
 
 numbersChecked = Enumerable.DefaultIfEmpty<int>(numbersSource,25); // use another value
 
-numbersChecked.Dump();
+numbersChecked.Dump("My value added to sequence.");
 
