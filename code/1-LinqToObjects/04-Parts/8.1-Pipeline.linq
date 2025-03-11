@@ -34,7 +34,3 @@ var q1 = from method in typeof(System.Linq.Enumerable).GetMethods()
 q1.Dump("All Enumerable method overloads and their return type.");
 
 
-
-// old
-
-

@@ -2,11 +2,11 @@
 
 var colors = new List<string>
 		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
-		   "White", "Black", "Blue" ,"Bronze"};
+		  "White", "Black", "Blue" ,"Bronze"};
 
 // From Microsoft docs:
 
-// Query syntax and method syntax are semantically identical, 
+// Query expression syntax and method syntax are semantically identical, 
 // but many people find query syntax simpler and easier to read. 
 // Some queries must be expressed as method calls. 
 // For example, you must use a method call to express a query 
@@ -14,8 +14,8 @@ var colors = new List<string>
 
 
 var q1 = from color in colors
-		where color.StartsWith("B")
-		select color;
+				 where color.StartsWith("B")
+				 select color;
 
 q1.Dump("Query expression");
 
