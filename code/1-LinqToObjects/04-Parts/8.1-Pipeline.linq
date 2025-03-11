@@ -16,8 +16,9 @@
 // and returns a IEnumerable<T> or IOrderedEnumerable<T>.
 // The pipeline is processed when we iterate over the query
 
-// 	Query operators (e.g. OrderBy, Where) can either continue the pipeline 
+// 	Query operators can either continue the pipeline 
 //  by returning IEnumerable<T> or IOrderedEnumerable<T>
+// (e.g. OrderBy, Where) 
 //  or terminate it by return something else (Sum, Average, Count)!
 
 var a = Assembly.Load("System.Linq");
