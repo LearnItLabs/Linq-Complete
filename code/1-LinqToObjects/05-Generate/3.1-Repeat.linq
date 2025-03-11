@@ -1,8 +1,10 @@
 <Query Kind="Statements" />
 
-// Repeat,  adds a set of repeated items to IEnumerable
+ // Enumerable.Repeat is a functional and concise alternative to loops.
+ // Avoids mutable state and aligns with LINQ’s declarative style.
+ // Works with any data type, including numbers, strings, and objects.
 
-// statement based way to add items.
+// The Imperative (Statement-Based) Approach
 List<int> manyThrees = new List<int>();
 for (int i = 0; i < 120; i++)
 {
@@ -11,7 +13,8 @@ for (int i = 0; i < 120; i++)
 
 manyThrees.Dump("Many Threes");
 
-// using a function is preferable to writing statements (Functional Programming)
+// The Functional Approach:
+// A more concise and functional way to achieve the same resul
 
 var manyFives = Enumerable.Repeat<int>(5, 200);
 

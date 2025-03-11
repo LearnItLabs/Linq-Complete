@@ -11,11 +11,11 @@ var q2 = from color in q1
 		 select color;
 
 
-q2.Dump();
+q2.Dump("Where method as source for query expression.");
 
 // use Count on query expression
 
 var q3 = (from color in colors
 		  where color.StartsWith("G")
 		  select color).Count();
-q3.Dump();
+q3.Dump("Use .Count in query expression.");

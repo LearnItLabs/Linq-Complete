@@ -10,11 +10,12 @@ IEnumerable<string> colors = new List<string>
 			 "White", "Black", "Blue" ,"Bronze"};
 
 
-// this query takes a list of strings and returns a single integer
+// this query takes a list of strings and returns a list of integers
 // remember to us the extension methods to perform this operation
 IEnumerable<int> q1 = from c in colors
 												 select c.Length;
 
-int count = q1.Count();
+q1.Dump();
+int count = q1.Min();
 
-count.Dump("Word count" );
+count.Dump("Shortest Word" );

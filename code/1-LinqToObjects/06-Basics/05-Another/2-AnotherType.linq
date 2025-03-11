@@ -1,5 +1,5 @@
 <Query Kind="Program">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 void Main()
@@ -11,7 +11,7 @@ void Main()
 	// In other cases, return a sequence of different type
 
 
-	var q1 = from color in CourseLib.ColorSource.GetColors()
+	var q1 = from color in ColorLib.ColorSource.WebColors
 					 orderby color.ColorName
 					 select new SimpleColor { ColorCategory = color.ColorFamily.ToString(), Hexadecimal = color.HexValue };
 

@@ -12,15 +12,16 @@ var colors = new List<string>
 // For example, you must use a method call to express a query 
 // that retrieves the number of elements that match a specified condition
 
+
 var q1 = from color in colors
 		where color.StartsWith("B")
 		select color;
 
-q1.Dump();
+q1.Dump("Query expression");
 
 
 // use an extension method on query variable
 
 var count = q1.Count();
 
-count.Dump("Count method");
+count.Dump("Use Count extension method on query variable.");
