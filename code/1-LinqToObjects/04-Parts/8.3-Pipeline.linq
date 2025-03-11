@@ -2,21 +2,30 @@
   <Reference>&lt;RuntimeDirectory&gt;\System.Linq.dll</Reference>
 </Query>
 
-// A query consists of a source (sequence) and
-// and at least one query operator.
-
-// All query operators are implemented as extension methods  
-// and are defined in the Enumerable class.
-
-var a = Assembly.Load("System.Linq");
+var colors = new List<string>
+		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
+			 "White", "Black", "Blue" ,"Bronze", "Bronze"};
 
 
-var q2 = from method in typeof(System.Linq.Enumerable).GetMethods()
-		 orderby method.Name
-		 where method.ReturnType.IsGenericType
-		 && method.ReturnType.GetGenericTypeDefinition() == typeof(IEnumerable<>)
-		 |  method.ReturnType.GetGenericTypeDefinition() == typeof(IOrderedEnumerable<>)
-		 select new { Name = method.Name, ReturnType = method.ReturnType.Name.Replace("`1", "<T> ") };
-q2.Dump("Enumerable methods that return IEnumerable or IOrderedEnumerable");
+// write pipeline example
+// Where returns IEnumerable<T>
+
+var pipe1 = colors.Where(c => c.Length > 5);
+
+// OrderBy returns IOrderedEnumerable<T>
+var pipe2 = pipe1.OrderBy(p => p);
+
+pipe2.Dump("ordered and filtered");
+
+// Distinct returns IEnumerable<T>
+var pipe3 = pipe2.Distinct();
+
+pipe3.Dump("Remove duplicates");
+
+// or like this
+
+var q = colors.Where(c => c.Length > 5).OrderBy(c => c).Distinct();
+
+q.Dump("Single line pipeline");
 
 

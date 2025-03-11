@@ -9,18 +9,27 @@
 // the LINQ query pipeline or terminates it.
 // .OrderBy continues the pipeline
 // .Count would terminate the pipeline
+
+
+
 var a = Assembly.Load("System.Linq");
 
+
 var q1 = from method in typeof(System.Linq.Enumerable).GetMethods()
-				 let cleanData = new {MethodName = method.Name, ReturnType = method.ReturnType.Name.Replace("`1", "<T> ")}
-				
-					group method by cleanData.ReturnType
-					into methodGroup 
-					orderby methodGroup.Key
-				 select new { Name = methodGroup.Key, Methods = methodGroup.Select(m => m.Name) };
+				 orderby method.Name
+				 where method.ReturnType.IsGenericType
+				 && method.ReturnType.GetGenericTypeDefinition() == typeof(IEnumerable<>)
+				 | method.ReturnType.GetGenericTypeDefinition() == typeof(IOrderedEnumerable<>)
+				 select new { Name = method.Name, ReturnType = method.ReturnType.Name.Replace("`1", "<T> ") };
+q1.Dump("Enumerable methods that return IEnumerable or IOrderedEnumerable");
 
-q1.Dump("All Enumerable method overloads and their return type.");
+var q2 = from method in typeof(System.Linq.Enumerable).GetMethods()
+				 let returnType = method.ReturnType
+				 where !returnType.IsGenericType ||
+							 (returnType.GetGenericTypeDefinition() != typeof(IEnumerable<>) &&
+								returnType.GetGenericTypeDefinition() != typeof(IOrderedEnumerable<>))
+				 orderby method.Name
+				 select new { Name = method.Name, ReturnType = method.ReturnType.Name.Replace("`1", "<T> ") };
 
 
-
-
+q2.Dump("Enumerable methods that terminate a pipeline or perform some other function.");
