@@ -1,20 +1,23 @@
-<Query Kind="Statements">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+<Query Kind="Expression">
+  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // Challenge:
 
-// create a query expression that outputs a sequence 
-// show ColorName 
-// and shows a RGB color formula 
-// "rgb (a, b, c)" where 
-//  a = redvalue, g = greenvalue, b = bluevalue
-// for example,
+// Create a query expression that:
 
+// ✅ Outputs a sequence 
+// ✅ Display the ColorName 
+// ✅ Shows the RGB color formula in the format "rgb(R, G, B)" 
+// where R = redvalue, G = greenvalue, B = bluevalue
+
+// Example output
 // SpringGreen, rgb (000, 255, 127)
 // LightYellow, rgb (255, 255, 224 
 
 
-// optional requirement, format number values with three place
-// optional requirement, sort by GreenValue
-// example 23 is formatted as 023
+// Optional enhancements:
+// ✅ Format numeric values with three digits (e.g., 23 → "023") 
+// ✅ Sort by GreenValue
+
+
