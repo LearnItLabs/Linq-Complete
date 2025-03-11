@@ -16,7 +16,7 @@ var colors = new List<string>
 //    select (to shape the output) or group(to group results).
 
 // Optional keywords
-// [where, orderby, join, let, from, into, ascending, descending, let]
+// [where, orderby, join, let, by, into, ascending, descending]
 
 var q1 = from c in colors
 				 select c;
