@@ -3,7 +3,8 @@
 // Let's review some principles
 // LINQ query expressions can be categorized into three areas
 
-// 1. Takes a sequence, returns a new sequence containing the same element type.
+// 1. Sequence to Same Sequence Type:
+//		Takes a sequence, returns a new sequence containing the same element type.
 //    Doubles to Doubles, Strings to Strings, Products to Products, etc.
 //    Elements are the same, but may be sorted, grouped, filtered
 

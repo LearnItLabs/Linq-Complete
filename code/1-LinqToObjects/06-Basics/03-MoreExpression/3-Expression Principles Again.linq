@@ -1,6 +1,7 @@
 <Query Kind="Statements" />
 
-// 3. Takes a sequence, returns a single value.
+// 3. Sequence to Single Value:
+//		Takes a sequence, returns a single value.
 //    AKA (fold, reduce, aggregate, accumulate, etc.)
 //		reduces a list of data to a aggregate value
 //    min, max, sum
@@ -10,12 +11,13 @@ IEnumerable<string> colors = new List<string>
 			 "White", "Black", "Blue" ,"Bronze"};
 
 
-// this query takes a list of strings and returns a list of integers
-// remember to us the extension methods to perform this operation
+// This query takes a list of strings and returns a list of integers.
+// Cannot use aggregate method in Query expression syntax. 
+// Use the extension methods to perform these operations.
 IEnumerable<int> q1 = from c in colors
-												 select c.Length;
+											select c.Length;
 
 q1.Dump();
-int count = q1.Min();
+int count = q1.Min(); // Get the shortest word.
 
 count.Dump("Shortest Word" );

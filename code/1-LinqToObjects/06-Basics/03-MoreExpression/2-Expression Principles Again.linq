@@ -1,6 +1,7 @@
 <Query Kind="Statements" />
 
-// 2. Takes a sequence, returns a new sequence containing a different type of element.
+// 2. Sequence to Different Sequence Type:
+//		Takes a sequence, returns a new sequence containing a different type of element.
 //    Transforms the object into another type.
 //    Integers to Strings, Products to Strings
 
