@@ -2,11 +2,11 @@
 
 void Main()
 {
-	var validList = new List<int> {2,4,6,8};
-	ProcessData(validList);
+	var fullOfData = new List<int> {2,4,6,8};
+	ProcessData(fullOfData);
 	
-	var emptyList = Enumerable.Empty<int>().ToList();
-	ProcessData(emptyList);
+	var emptyOfData = Enumerable.Empty<int>();
+	ProcessData(emptyOfData);
 	
 }
 
@@ -15,7 +15,7 @@ void Main()
 
 void ProcessData(IEnumerable<int> data)
 {
-	// we don't data to be null
+	// 
 	if (!data.Any()) {
 		"The sequence is empty.".Dump();
 	}
