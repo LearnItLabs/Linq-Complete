@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -22,15 +22,15 @@ namespace UseWebColors.Pages
 
 		public void OnPost()
 		{
-			WebColors = ColorLib.ColorSource.WebColors.Where(x=>x.ColorFamily == CurrentColorFamily).ToList();
+		//	WebColors = ColorLib.ColorSource.WebColors.Where(x => x.ColorFamily == CurrentColorFamily).ToList();
+			WebColors = (from c in ColorLib.ColorSource.WebColors
+									 where c.ColorFamily == CurrentColorFamily
+									 select c).ToList();
 		}
 		public void OnGet()
 		{
 			
-			//var q = from color in colors
-			//				where color.ColorFamily == CourseLib.ColorFamily.Blue
-			//				|| color.ColorFamily == CourseLib.ColorFamily.Yellow
-			//				select color;
+
 
 		}
 		public List<WebColor>	WebColors { get; set; }

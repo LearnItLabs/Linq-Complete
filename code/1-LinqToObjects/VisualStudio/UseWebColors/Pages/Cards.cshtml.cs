@@ -23,15 +23,13 @@ namespace UseWebColors.Pages
 
 		public void OnPost()
 		{
-			Cards = CardLib.CardSource.Cards.Where(x=>x.CardFamily == CurrentCardFamily).ToList();
+			// Cards = CardLib.CardSource.Cards.Where(c => c.CardFamily == CurrentCardFamily).ToList();
+			Cards = (from c in CardLib.CardSource.Cards
+							 where c.CardFamily == CurrentCardFamily
+							 select c).ToList();
 		}
 		public void OnGet()
 		{
-			
-			//var q = from color in colors
-			//				where color.ColorFamily == ColorLib.ColorFamily.Blue
-			//				|| color.ColorFamily == ColorLib.ColorFamily.Yellow
-			//				select color;
 
 		}
 		public List<CardLib.Cards.Card>	Cards { get; set; }
