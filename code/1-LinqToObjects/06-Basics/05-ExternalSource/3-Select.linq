@@ -10,7 +10,7 @@
 // in this example, its a list of same type
 
 	var q = from color in ColorLib.ColorSource.WebColors
-						orderby color.ColorFamily
+					orderby color.ColorFamily
 					select color;
 
 	q.Dump();

@@ -7,11 +7,11 @@
 
 
 var q1 = from color in ColorLib.ColorSource.WebColors
-						select color.BlueValue;
+				 select color.BlueValue;
 						
 q1.Dump("IEnumerable<int>");
 
 var q2 = from color in ColorLib.ColorSource.WebColors
-				select color.ColorName;
+				 select color.ColorName;
 
 q2.Dump("IEnumerable<string>");
