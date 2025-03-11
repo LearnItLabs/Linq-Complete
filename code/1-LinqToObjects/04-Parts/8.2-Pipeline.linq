@@ -5,7 +5,8 @@
 // Pipeline candidates
 // are methods that return IEnumerable or IOrderedEnumerable
 
-// The key distinction is whether the method continues the LINQ query pipeline or terminates it.
+// The key distinction is whether the method continues 
+// the LINQ query pipeline or terminates it.
 // .OrderBy continues the pipeline
 // .Count would terminate the pipeline
 var a = Assembly.Load("System.Linq");
