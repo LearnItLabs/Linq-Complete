@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -29,8 +29,8 @@ namespace UseWebColors.Pages
 		{
 			
 			//var q = from color in colors
-			//				where color.ColorFamily == CourseLib.ColorFamily.Blue
-			//				|| color.ColorFamily == CourseLib.ColorFamily.Yellow
+			//				where color.ColorFamily == ColorLib.ColorFamily.Blue
+			//				|| color.ColorFamily == ColorLib.ColorFamily.Yellow
 			//				select color;
 
 		}
