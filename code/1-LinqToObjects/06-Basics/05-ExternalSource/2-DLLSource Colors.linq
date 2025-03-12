@@ -8,5 +8,6 @@
 // see the visual studio project to examine the code
 
 // be sure and add a reference to the DLL (Press F4 in LINQPad)
+// ..\code\Data\Assemblies\ColorLib
 
 	ColorLib.ColorSource.WebColors.Dump();
