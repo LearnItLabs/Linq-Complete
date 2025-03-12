@@ -6,7 +6,7 @@
 // 1. Sequence to Same Sequence Type:
 //		Takes a sequence, returns a new sequence containing the same element type.
 //    Doubles to Doubles, Strings to Strings, Products to Products, etc.
-//    Elements are the same, but may be sorted, grouped, filtered
+//    Elements are the same, but may be sorted, filtered etc.
 
 
 	IEnumerable<string> colors = new List<string>
