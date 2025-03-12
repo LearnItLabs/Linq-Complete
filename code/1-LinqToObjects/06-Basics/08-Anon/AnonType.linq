@@ -1,16 +1,16 @@
 <Query Kind="Statements">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // select returns a sequence of the chosen type
 // IEnumerable<string>, IEnumerable<Product>
-//
 
 // Transform type with an anonymous type
 
+// Portuguese titles
 
-var q = from color in CourseLib.ColorSource.GetColors()
+var q = from color in ColorLib.ColorSource.WebColors
 				orderby color.ColorName
-				select new {Name = color.ColorName,Family= color.ColorFamily};
+				select new {NomeDaCor = color.ColorName,FamíliaDeCores = color.ColorFamily};
 
 q.Dump("Sequence of anonymous type");
