@@ -16,6 +16,7 @@ var monstersOnly = from card in allCards.OfType<CardLib.Cards.Robot>()
 var interfaceOnly = from card in CardLib.CardSource.Cards.OfType<ISerializable>()
 										select card;
 
+allCards.Select(c => new { c.Name, c.TypeName, c.BaseClassName }).Dump();
 passThrough.Select(c => new { c.Name, c.TypeName, c.BaseClassName }).Dump();
 monstersOnly.Select(c => new { c.Name, c.ListPrice, c.TypeName, c.BaseClassName}).Dump();
 interfaceOnly.Select(c => c).Dump();
