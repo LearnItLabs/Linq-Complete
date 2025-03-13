@@ -13,4 +13,5 @@
 | First()     | head, first, car            | Retrieves the first element in a sequence.       |
 | Last()      | last, tail                  | Retrieves the last element in a sequence.        |
 | Aggregate() | fold, reduce, inject        | Performs a custom accumulation over a sequence.  |
+|-------------|-----------------------------|--------------------------------------------------|
 */

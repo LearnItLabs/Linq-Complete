@@ -2,12 +2,11 @@
 
 // An aggregate operation produces a single value
 // From the input sequence 
-// example (a,b,c,d,e)
+// the sequence (a,b,c,d,e)
 // perform an operation with each sucessive pair
 
 // result = operation (a, b)
-// result = operation (result, b)
-// result = operation (result, c)
+// result = operation (result, c)	
 // result = operation (result, d)
 // result = operation (result, e)
 

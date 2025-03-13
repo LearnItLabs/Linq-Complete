@@ -1,8 +1,8 @@
 <Query Kind="Statements">
-  <Reference Relative="..\..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
+  <Reference Relative="..\..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
-//In the context of LINQ aggregate operators, 
+// In the context of LINQ aggregate operators, 
 // selectors refer to functions or expressions 
 // that specify which property or value should be used in the aggregation process. 
 // They transform or project elements from a data source 
@@ -14,7 +14,7 @@ var allColors = ColorLib.ColorSource.WebColors;
 
 // var sum = allColors.Sum(c => c ); // LINQ does not know how to sum this sequence!
 
-var sum = allColors.Sum(c => c.RedPercent ); // Choose the propery to sum wiht a 'Selector'
+var sum = allColors.Sum(c => c.RedPercent ); // Choose the propery to sum with a 'Selector'
 
 sum.Dump("Sum of Red Percent");
 

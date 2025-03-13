@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\..\Data\Assemblies\CardLib\CardLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\CardLib\CardLib.dll</Reference>
+  <Reference Relative="..\..\Data\Assemblies\CardLib\CardLib.dll">D:\repos\Linq-Complete\code\Data\Assemblies\CardLib\CardLib.dll</Reference>
   <Namespace>System.Runtime.Serialization</Namespace>
 </Query>
 
