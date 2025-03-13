@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Dynamic;
 using System.Runtime.Serialization;
@@ -20,16 +20,27 @@ namespace CardLib.Cards
 
 		public string TypeName
 		{
+			//This TypeName property helps us see the exact type
+			// of each object when running our queries.
+			// Not useful in real world applications!
 			get { return this.GetType().Name; }
 		}
+		public string BaseClassName
+		{
+
+			get { return this.GetType().BaseType.Name; }
+		}
 	}
-	public class Creature : Card
+	public class Creature : Card, ISerializable
 	{
 
 		public int EyeCount { get; set; }
 		public bool Spikes { get; set; }
 		public bool Antenna { get; set; }
-		
+
+		public void GetObjectData(SerializationInfo info, StreamingContext context) {
+			throw new NotImplementedException();
+		}
 	}
 	public class Monster : Creature
 	{
