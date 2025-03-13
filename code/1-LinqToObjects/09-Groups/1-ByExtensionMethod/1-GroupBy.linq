@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
+  <Reference Relative="..\..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // GroupBy returns a sequence of groups
@@ -15,4 +15,3 @@
 
 	groupedResult.Dump();
 
-	//groupedResult.ElementAt(2).Dump();
