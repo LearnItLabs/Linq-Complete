@@ -3,6 +3,8 @@
 </Query>
 
 // Work with a nested group sequence
+// Each group contains its own set of values, resulting in two levels of sequences.
+// To iterate through all the data, we need at least two for-each loops.
 
 var colors = ColorLib.ColorSource.WebColors;
 // use result selector to customize the generated sequence
@@ -15,11 +17,11 @@ var grouped = colors.GroupBy(keySelector: x => x.ColorFamily,
 
 foreach (var group in grouped)
 {
-
+		// Result selector renames the key and group
 	Console.WriteLine(group.Family);
 	foreach (var color in group.Colors)
 	{
-		Console.WriteLine($"    {color.ColorName}");
+		Console.WriteLine($"    -{color.ColorName}");
 	}
 	
 	Console.WriteLine();
