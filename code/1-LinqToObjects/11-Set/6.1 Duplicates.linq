@@ -2,14 +2,11 @@
   <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
-// Distinct removes all the duplicate items
-// what about a scenario where you want to find duplicates instead?
+// Distinct removes all the duplicate items,
+// But what if you need to find them instead?
 
-
-// at first it seems possible to use Distinct and another Set function.
-// however that doesn't seem possible
-
-// instead use the group by clause
+// To find duplicates, use GroupBy() to group items based on their key.
+// Then, filter groups where the count is greater than one to identify repeated values.
 
 //var hexValues = CourseLib.ColorSource.GetColors().Select(x=>x.HexValue);
 //hexValues.Distinct().Dump();
