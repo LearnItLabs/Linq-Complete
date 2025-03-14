@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
+  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // challenge
@@ -26,6 +26,6 @@
 var colors = ColorLib.ColorSource.WebColors;
 
 var q = from color in colors
-				group color by color.HSL.Saturation;
+				group color by color.HSL.Saturation ;
 
 q.Dump();

@@ -1,5 +1,5 @@
 <Query Kind="Program">
-  <Reference Relative="..\..\..\Data\Assemblies\CardLib\CardLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\CardLib\CardLib.dll</Reference>
+  <Reference Relative="..\..\..\Data\Assemblies\CardLib\CardLib.dll">D:\repos\Linq-Complete\code\Data\Assemblies\CardLib\CardLib.dll</Reference>
 </Query>
 
 void Main()
@@ -20,11 +20,11 @@ void Main()
 };
 
 
-var groupedByColorFamily = products.GroupBy(keySelector: p => new { p.Farm, p.Category },
-													elementSelector: y => new { y.ProduceName },
-													resultSelector: (key, value) => new { ComboKey = key, Produce = value });
+	var groupedByColorFamily = products.GroupBy(keySelector: p => new { p.Farm, p.Category },
+														elementSelector: y => new { y.ProduceName },
+														resultSelector: (key, value) => new { ComboKey = key, Produce = value });
 
-groupedByColorFamily.OrderBy(group => group.ComboKey.Farm).Dump();
+	groupedByColorFamily.OrderBy(group => group.ComboKey.Farm).Dump();
 }
 
 // You can define other methods, fields, classes and namespaces here
