@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
+  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // Distinct removes all the duplicate items,
@@ -12,11 +12,11 @@
 //hexValues.Distinct().Dump();
 
 var q1 = from color in ColorLib.ColorSource.WebColors
-				 group color by color.HexValue into hex
-				 where hex.Count() > 1
-				 select hex;
+				 group color by color.HexValue into hexGroup
+				 where hexGroup.Count() > 1
+				 select new {HexValue = hexGroup.Key,ColorNames = hexGroup.Select(g => g.ColorName) };
 q1.Dump();
-
+ 
 // use extension methods
 
 var q2 = ColorLib.ColorSource.WebColors.GroupBy(g => g.HexValue).Where(x => x.Count() > 1);

@@ -1,8 +1,6 @@
 <Query Kind="Statements" />
 
 // Union:  merge two sequences, remove all duplicates
-
-
 // List of products in stores
 var storeInventory1 = new List<string>
 {

@@ -33,14 +33,13 @@ void Main()
 
 	// Intersect the IDs using method syntax
 	var intersectedIds = workingIds.Intersect(trainedIds);
-
+ intersectedIds.Dump();
 	// Find the employees who are both working and have completed the training
 	var qualifiedEmployees = from id in intersectedIds
 													 select workingEmployees.First(e => e.Id == id);
 
-	// Convert to list
-	var result = qualifiedEmployees.ToList();
-	result.Dump();
+
+	qualifiedEmployees.Dump();
 
 }
 // Define Employee class

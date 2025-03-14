@@ -20,7 +20,7 @@ var checkedOutBooks = new List<string>
 };
 
 // Find the books that are still available in the library
-var availableBooks = allBooks.Except(checkedOutBooks).ToList();
+var availableBooks = allBooks.Except(checkedOutBooks);
 
 
 availableBooks.Dump("Books that are still available");
