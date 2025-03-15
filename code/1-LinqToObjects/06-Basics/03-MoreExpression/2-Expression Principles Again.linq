@@ -6,7 +6,7 @@
 //    Integers to Strings, Products to Strings
 
 	IEnumerable<string> colors = new List<string>
-			{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
+			{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgundy","Purple",
 				 "White", "Black", "Blue" ,"Bronze"};
 
 

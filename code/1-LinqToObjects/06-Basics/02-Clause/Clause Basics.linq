@@ -1,7 +1,7 @@
 <Query Kind="Statements" />
 
 var colors = new List<string>
-		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
+		{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgundy","Purple",
 			 "White", "Black", "Blue" ,"Bronze"};
 
 // The Query expression syntax is a substitute for calling the 

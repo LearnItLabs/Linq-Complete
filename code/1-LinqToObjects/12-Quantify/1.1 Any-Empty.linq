@@ -2,7 +2,7 @@
 
 	
 	var colors = new List<string>
-			{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgandy","Purple",
+			{ "Green", "Blush", "Yellow",  "Red", "Orange", "Burgundy","Purple",
 				 "White", "Black", "Blue" ,"Bronze"};
 	var emptyList = new List<double>();
 	// Any:  Check for empty list
