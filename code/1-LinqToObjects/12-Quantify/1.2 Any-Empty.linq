@@ -3,7 +3,7 @@
  // Documentation states that .Any() is more effienct
  // That was true in older versions of .NET
  // Not so much in newer.
- // Count can determine if the sequence has a .Count  or .Lenght property
+ // Count can determine if the sequence has a .Count  or .Length property
  
  // Not really an issue, differences are measured 
  // in nanoseconds

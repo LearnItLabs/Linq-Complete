@@ -1,5 +1,5 @@
 <Query Kind="Statements">
-  <Reference Relative="..\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll">D:\repos\LearnItLabs\Linq-Complete\code\1-LinqToObjects\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
+  <Reference Relative="..\..\Data\Assemblies\ColorLib\ColorLib.dll">D:\repos\Linq-Complete\code\Data\Assemblies\ColorLib\ColorLib.dll</Reference>
 </Query>
 
 // Contains:  return whether a specified item is contained in the sequence.
@@ -9,8 +9,9 @@
 
 	containsNumber.Dump("Contains 14");
 
-	var colors = CourseLib.ColorSource.GetColors();
-	var colorRef1 = new CourseLib.WebColor { ColorName = "DirtBrown", ColorFamily = CourseLib.ColorFamily.Brown };
+	var colors = ColorLib.ColorSource.WebColors;
+	var colorRef1 = new ColorLib.WebColor { ColorName = "DirtBrown",
+																					ColorFamily = ColorLib.ColorFamily.Brown};
 	var colorRef2 = colors.ElementAt(101);
 
 	var containsBrown = colors.Contains(colorRef1);

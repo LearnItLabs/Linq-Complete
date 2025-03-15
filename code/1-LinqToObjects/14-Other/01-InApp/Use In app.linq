@@ -4,4 +4,4 @@
 
 // Chapter 6, videos #4 and #5
 
-// See more examples in the LilnqToDb Chapter
+// See more examples in the LINQ to DB Chapter
