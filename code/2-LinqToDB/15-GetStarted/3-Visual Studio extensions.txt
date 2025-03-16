@@ -1,0 +1,14 @@
+For this course, I’ve chosen SQLite as the database solution
+to simplify the setup and ensure a smooth learning experience for everyone. 
+
+Unlike local SQL Server database files (MDFs), 
+which often create compatibility headaches due to version mismatches, 
+SQLite is, self-contained, lightweight and highly portable. 
+
+It doesn’t require any server installation, making it an excellent choice for teaching and learning.
+
+
+To work with SQLite in Visual Studio, we’ll need to install some additional extensions. 
+
+VisualStudio.Data.Sqlite 
+EF Core Power Tools
