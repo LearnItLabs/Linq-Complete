@@ -1,6 +1,9 @@
-When creating a connection using the LINQPad type data context
+The data connection string is important in order to connect to the Sqlite databases
+The DataDepot assembly gets the connection string from the appsettings.json.
 
-1. Choose the Data\Assemblies\DataDepot folder.
+You need to change this connection string to match the location where you installed the course example files.
+
+1. Choose the ..\Linq-Complete\code\Data\Assemblies\DataDepot folder.
 2. Open the appsettings.json file.
 3. Change the DataSource ="your install location"
 
@@ -11,4 +14,6 @@ When creating a connection using the LINQPad type data context
 	"BigStarConnection": "Data Source=D:\\repos\\LearnItLabs\\Linq-Complete\\code\\Data\\Sqlite\\BigStar.sqlite"
 }
 }
+Do the same for for the 
+..\Linq-Complete\code\2-LinqToDB\VisualStudio\DataDepot folder.
 
