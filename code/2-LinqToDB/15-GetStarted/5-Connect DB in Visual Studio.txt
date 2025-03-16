@@ -1,0 +1,1 @@
+SEe how to connect to Sqlite databases in Visual Studio
