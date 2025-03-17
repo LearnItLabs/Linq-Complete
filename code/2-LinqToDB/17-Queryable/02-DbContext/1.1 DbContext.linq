@@ -1,6 +1,6 @@
 <Query Kind="Statements">
   <Connection>
-    <ID>ed9c21bd-aa27-4ba0-97a6-40816b8ea640</ID>
+    <ID>26d579d0-e134-466a-aa95-6b5d4d17e2d7</ID>
     <NamingServiceVersion>2</NamingServiceVersion>
     <Persist>true</Persist>
     <Driver Assembly="EF7Driver" PublicKeyToken="469b5aa5a4331a8c">EF7Driver.StaticDriver</Driver>
@@ -11,7 +11,6 @@
       <UseDbContextOptions>false</UseDbContextOptions>
     </DriverData>
   </Connection>
-  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
 // DbContext is the central point for interacting 
