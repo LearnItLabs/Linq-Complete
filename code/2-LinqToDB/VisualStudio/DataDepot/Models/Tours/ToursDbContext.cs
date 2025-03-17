@@ -9,9 +9,6 @@ namespace ToursLib.Models;
 
 public partial class ToursDbContext : DbContext
 {
-    //public ToursDbContext()
-    //{
-    //}
 
     public ToursDbContext(DbContextOptions<ToursDbContext> options)
         : base(options)
@@ -19,12 +16,14 @@ public partial class ToursDbContext : DbContext
     }
 
 	string _connectionString;
-	// This constructor is simpler and more robust. Use it if LINQPad errors on the constructor above.
+	// This constructor is simpler and more robust. 
+  // Use it if LINQPad errors on the constructor above.
 	// Note that _connectionString is picked up in the OnConfiguring method below.
 	public ToursDbContext(string connectionString) => _connectionString = connectionString;
 
 	// This constructor obtains the connection string from your appsettings.json file.
-	// Tell LINQPad to use it if you don't want to specify a connection string in LINQPad's dialog.
+	// Tell LINQPad to use it if you don't want to 
+   // specify a connection string in LINQPad's dialog.
 	public ToursDbContext() {
 		IConfiguration config = new ConfigurationBuilder().AddJsonFile("appsettings.json").Build();
 		_connectionString = config.GetConnectionString("ToursConnection");
@@ -41,9 +40,11 @@ public partial class ToursDbContext : DbContext
 		if (_connectionString != null)
 			optionsBuilder.UseSqlite(_connectionString);    // Change to UseSqlite if you're using SQLite
 
-		// Recommended: uncomment the following line to enable lazy-loading navigation hyperlinks in LINQPad:
+		// Recommended: uncomment the following line to
+    // enable lazy-loading navigation hyperlinks in LINQPad:
 		if (InsideLINQPad) optionsBuilder.UseLazyLoadingProxies();
-		// (You'll need to add a reference to the Microsoft.EntityFrameworkCore.Proxies NuGet package, and
+		// (You'll need to add a reference to the
+    // Microsoft.EntityFrameworkCore.Proxies NuGet package, and
 		//  mark your navigation properties as virtual.)
 
 		// Recommended: uncomment the following line to enable the SQL trace window:
