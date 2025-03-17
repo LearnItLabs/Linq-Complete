@@ -11,7 +11,6 @@
       <UseDbContextOptions>false</UseDbContextOptions>
     </DriverData>
   </Connection>
-  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
 var db = new NorthwindDbContext();

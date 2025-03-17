@@ -2,7 +2,7 @@
 
 // ADO.NET,predates Entity Framework (EF), it was a foundational layer for many data access operations in .NET
  // There is LINQ to Datasets
-including some aspects of LINQ to Entities.
+// including some aspects of LINQ to Entities.
 // ADO.NET DataSets provide a disconnected data architecture 
 // that allows you to work with in-memory data collections 
 // independent of the data source. 

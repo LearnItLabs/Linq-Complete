@@ -16,7 +16,6 @@
     </DriverData>
   </Connection>
   <Output>DataGrids</Output>
-  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
 // Where clause filters the number of rows returned 

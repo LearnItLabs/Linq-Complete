@@ -15,7 +15,6 @@
       <EFProvider>Microsoft.EntityFrameworkCore.SqlServer</EFProvider>
     </DriverData>
   </Connection>
-  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
 // group by ship country

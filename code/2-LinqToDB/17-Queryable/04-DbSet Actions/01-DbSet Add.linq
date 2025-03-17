@@ -11,12 +11,12 @@
       <UseDbContextOptions>false</UseDbContextOptions>
     </DriverData>
   </Connection>
-  <Reference>C:\Users\WR\Source\Repos\linq-2833070\source\VisualStudio\CourseLib\bin\Debug\netstandard2.0\CourseLib.dll</Reference>
 </Query>
 
 var db = new NorthwindDbContext();
 // DbSet instance is a collection
 // filled from the database
+
 
 // changes to items in the DbSet are not commited to DB, unless .SaveChanges is called.
 
