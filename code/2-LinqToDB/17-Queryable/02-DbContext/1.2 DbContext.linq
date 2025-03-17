@@ -31,6 +31,6 @@ q.Distinct().Dump();
 
 var q2 = from p in props
 				 orderby p.Name
-				 select new { p.Name, Type = p.PropertyTypet};
+				 select new { p.Name, Type = p.PropertyType};
 q2.Distinct().Dump();
 

@@ -29,8 +29,11 @@
 //    to ensure that all operations either succeed or fail together, 
 //    maintaining data integrity.
 
+ // We don't need to use options, because of the 
+ // modification made to the DB context constructors.
 	var context = new ToursDbContext();
 	
+	//
 	//
 	var type = context.GetType();
 	type.FullName.Dump("DbContext Type");
