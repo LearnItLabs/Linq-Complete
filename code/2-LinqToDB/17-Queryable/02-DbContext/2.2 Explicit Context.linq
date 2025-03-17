@@ -1,17 +1,16 @@
 <Query Kind="Statements">
   <Connection>
-    <ID>78feeb8f-8587-4984-b154-cd46924cf378</ID>
+    <ID>f38ceccc-d873-4ebc-b79d-c3ba06d89c93</ID>
     <NamingServiceVersion>2</NamingServiceVersion>
+    <Persist>true</Persist>
     <Driver Assembly="(internal)" PublicKeyToken="no-strong-name">LINQPad.Drivers.EFCore.DynamicDriver</Driver>
     <AllowDateOnlyTimeOnly>true</AllowDateOnlyTimeOnly>
-    <Server>(localdb)\MSSQLLocalDB</Server>
-    <AttachFile>true</AttachFile>
-    <AttachFileName>D:\repos\LearnItLabs\Linq-Complete\code\Data\SqlServer\Tours.V15.mdf</AttachFileName>
+    <AttachFileName>D:\repos\LearnItLabs\Linq-Complete\code\Data\Sqlite\Tours.sqlite</AttachFileName>
     <DisplayName>Tours</DisplayName>
     <DriverData>
       <EncryptSqlTraffic>True</EncryptSqlTraffic>
       <PreserveNumeric1>True</PreserveNumeric1>
-      <EFProvider>Microsoft.EntityFrameworkCore.SqlServer</EFProvider>
+      <EFProvider>Microsoft.EntityFrameworkCore.Sqlite</EFProvider>
     </DriverData>
   </Connection>
 </Query>
