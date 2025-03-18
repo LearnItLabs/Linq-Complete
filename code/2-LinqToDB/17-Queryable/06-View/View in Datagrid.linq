@@ -1,21 +1,16 @@
 <Query Kind="Statements">
   <Connection>
-    <ID>e84f6018-5946-4d14-a8b1-86541c3b32ea</ID>
+    <ID>b8c4dc23-131e-4b0f-8c01-82a9e2f816a6</ID>
     <NamingServiceVersion>2</NamingServiceVersion>
     <Persist>true</Persist>
-    <Driver Assembly="(internal)" PublicKeyToken="no-strong-name">LINQPad.Drivers.EFCore.DynamicDriver</Driver>
-    <AllowDateOnlyTimeOnly>true</AllowDateOnlyTimeOnly>
-    <Server>(localdb)\MSSQLLocalDB</Server>
-    <AttachFile>true</AttachFile>
-    <AttachFileName>D:\repos\LearnItLabs\Linq-Complete\code\Data\SqlServer\Northwind.V15.MDF</AttachFileName>
-    <DisplayName>Northwind</DisplayName>
+    <Driver Assembly="EF7Driver" PublicKeyToken="469b5aa5a4331a8c">EF7Driver.StaticDriver</Driver>
+    <CustomAssemblyPath>D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\DataDepot\DataDepot.dll</CustomAssemblyPath>
+    <AppConfigPath>D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\DataDepot\appsettings.json</AppConfigPath>
+    <CustomTypeName>NorthwindLib.Models.NorthwindDbContext</CustomTypeName>
     <DriverData>
-      <EncryptSqlTraffic>True</EncryptSqlTraffic>
-      <PreserveNumeric1>True</PreserveNumeric1>
-      <EFProvider>Microsoft.EntityFrameworkCore.SqlServer</EFProvider>
+      <UseDbContextOptions>false</UseDbContextOptions>
     </DriverData>
   </Connection>
-  <Output>DataGrids</Output>
 </Query>
 
 //      ^  ^
