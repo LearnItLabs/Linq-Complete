@@ -1,6 +1,6 @@
 <Query Kind="Statements">
   <Connection>
-    <ID>5937cd49-6dbe-4750-96bb-da714e4b6d30</ID>
+    <ID>b8c4dc23-131e-4b0f-8c01-82a9e2f816a6</ID>
     <NamingServiceVersion>2</NamingServiceVersion>
     <Persist>true</Persist>
     <Driver Assembly="EF7Driver" PublicKeyToken="469b5aa5a4331a8c">EF7Driver.StaticDriver</Driver>
@@ -18,14 +18,14 @@
 var context = new NorthwindDbContext();
 
 var q = from p in Products
-				where p.UnitPrice > 20
+				where p.UnitPrice > 25
 				select p;
 				
 				
-q.Dump("All products less than $20.00");
+q.Dump("All products greater than $25.00");
 
 var minPrice = q.Min(p => p.UnitPrice);
-minPrice.Dump("Lowest price of items over $20");
+minPrice.Dump("Lowest price of items over $25");
 var maxStock = q.Max(p => p.UnitsInStock);
 
 maxStock.Dump("Max Stock count");

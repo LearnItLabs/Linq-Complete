@@ -1,6 +1,6 @@
 <Query Kind="Statements">
   <Connection>
-    <ID>5937cd49-6dbe-4750-96bb-da714e4b6d30</ID>
+    <ID>b8c4dc23-131e-4b0f-8c01-82a9e2f816a6</ID>
     <NamingServiceVersion>2</NamingServiceVersion>
     <Persist>true</Persist>
     <Driver Assembly="EF7Driver" PublicKeyToken="469b5aa5a4331a8c">EF7Driver.StaticDriver</Driver>
@@ -13,21 +13,29 @@
   </Connection>
 </Query>
 
-var db = new NorthwindDbContext();
 
 // Use navigation properties to drill into sub collections.
 // Represented as DbSet<T> properties.
+var db = new NorthwindDbContext();
+db.Regions.Dump();
+var regionRow = db.Regions.ElementAt(1);
+regionRow.Dump("First Region");
+
+var ts = regionRow.Territories;
+ts.Dump("Region Territories");
+
+// var emp = ts.First().Employees.First( );
+var territoryRow = ts.ElementAt(6);
+territoryRow.Dump("The territory");
+
+
+territoryRow.Employees.Dump();
+
+var emp = territoryRow.Employees.First();
+
+emp.Dump("The Employee");
+
+emp.FirstName.Dump ("The employee name");	
 
 
 
-var q1 = db.Customers.Where(c => c.CompanyName.StartsWith("T")).Where(c => c.Orders.Count >2).Select(c=>c);
-
- 
- q1.Dump();
- 
-var q2 =  from c in db.Customers
-					let orderCount = c.Orders.Count( )
-					where orderCount >200
-					orderby c.CompanyName
-					select new {c.CompanyName, orderCount};
-	q2.Dump();
