@@ -2,7 +2,6 @@
   <Connection>
     <ID>e84f6018-5946-4d14-a8b1-86541c3b32ea</ID>
     <NamingServiceVersion>2</NamingServiceVersion>
-    <Persist>true</Persist>
     <Driver Assembly="(internal)" PublicKeyToken="no-strong-name">LINQPad.Drivers.EFCore.DynamicDriver</Driver>
     <AllowDateOnlyTimeOnly>true</AllowDateOnlyTimeOnly>
     <Server>(localdb)\MSSQLLocalDB</Server>
@@ -33,3 +32,4 @@
 					 where c.City.StartsWith ("S")
 					 select new {c.CompanyName, c.Address, c.City};
 	q2.Dump();
+	q2.ToQueryString().Dump();

@@ -13,19 +13,19 @@
   </Connection>
 </Query>
 
+var db = new NorthwindDbContext();
+// DbSet instance is a collection
+// filled from the database
 
+db.Regions.Dump("Before Update");
+// Get the new Region
 
-	var q1 = from p in Products
-					 select new {p.ProductName, p.UnitPrice};
-		q1.Dump();
+var nwRegion = db.Regions.Where(r => r.RegionId == 44 ).FirstOrDefault( );
 
-	var q2 = from p in Products
-						 group p by p.ProductName.Substring(0,1) into g
-						 select g;			 
-	q2.Dump();
+nwRegion.Dump("Region 44");
+nwRegion.RegionDescription = "NorthEast";
 
-	var q3 = from p in Products
-					 select new {p.ProductName, p.UnitPrice} into pGroup
-					 group pGroup by pGroup.ProductName.Substring(0, 1) into g
-					 select g;
-	q3.Dump();
+nwRegion.Dump("Region 44, Updated");
+
+db.SaveChanges();
+db.Regions.Dump("After Update");

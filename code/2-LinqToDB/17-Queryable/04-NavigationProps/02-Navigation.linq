@@ -14,15 +14,22 @@
 </Query>
 
 var db = new NorthwindDbContext();
-// DbSet instance is a collection
-// filled from the database
+
+// Use navigation properties to drill into sub collections.
+// Represented as DbSet<T> properties.
 
 
-// changes to items in the DbSet are not commited to DB, unless .SaveChanges is called.
 
-var nwRegion = new Region { RegionId = 44, RegionDescription = "NorthWest" };
-
-db.Regions.Dump("Before Add");
-db.Regions.Add(nwRegion);
-db.SaveChanges();
-db.Regions.Dump("After Add");
+ db.Regions.Dump();
+ var regionRow = db.Regions.First();
+ regionRow.Dump("First Regions");
+ 
+ var ts = regionRow.Territories;
+ ts.Dump("Navigate to Territories");
+ 
+ var emp = ts.First().Employees.First( );
+ 
+emp.LastName.Dump();
+ 
+ 
+ 
