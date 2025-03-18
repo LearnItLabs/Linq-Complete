@@ -13,11 +13,19 @@
   </Connection>
 </Query>
 
-Shippers.Dump();
+// These are the Queryable operators that we can use on our DbSets
 
-var q1 = from s in Shippers	
-					select s;
+var context = new NorthwindDbContext();
 
-q1.Dump();
+var q = from p in Products
+				where p.UnitPrice > 20
+				select p;
+				
+				
+q.Dump("All products less than $20.00");
 
-q1.ToQueryString().Dump();
+var minPrice = q.Min(p => p.UnitPrice);
+minPrice.Dump("Lowest price of items over $20");
+var maxStock = q.Max(p => p.UnitsInStock);
+
+maxStock.Dump("Max Stock count");

@@ -13,19 +13,12 @@
   </Connection>
 </Query>
 
+var db  = new NorthwindDbContext();
+db.Shippers.Dump();
 
+var q1 = from s in db.Shippers	
+					select s;
 
-	var q1 = from p in Products
-					 select new {p.ProductName, p.UnitPrice};
-		q1.Dump();
+q1.Dump();
 
-	var q2 = from p in Products
-						 group p by p.ProductName.Substring(0,1) into g
-						 select g;			 
-	q2.Dump();
-
-	var q3 = from p in Products
-					 select new {p.ProductName, p.UnitPrice} into pGroup
-					 group pGroup by pGroup.ProductName.Substring(0, 1) into g
-					 select g;
-	q3.Dump();
+q1.ToQueryString().Dump();

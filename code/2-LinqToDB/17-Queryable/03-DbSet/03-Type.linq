@@ -13,19 +13,20 @@
   </Connection>
 </Query>
 
+var context = new NorthwindDbContext();
+
+/*
+
+InternalDbSet<T> is a class that inherits from 
+Microsoft.EntityFrameworkCore.DbSet<T> in Entity Framework Core. 
+It is essentially a concrete implementation used internally 
+by EF Core to provide the behavior of DbSet.
+*/
 
 
-	var q1 = from p in Products
-					 select new {p.ProductName, p.UnitPrice};
-		q1.Dump();
+var allRegions = context.Regions;
+allRegions.Dump();
 
-	var q2 = from p in Products
-						 group p by p.ProductName.Substring(0,1) into g
-						 select g;			 
-	q2.Dump();
-
-	var q3 = from p in Products
-					 select new {p.ProductName, p.UnitPrice} into pGroup
-					 group pGroup by pGroup.ProductName.Substring(0, 1) into g
-					 select g;
-	q3.Dump();
+var myType = context.Regions.GetType();
+myType.BaseType.Namespace.Dump();
+myType.BaseType.Name.Dump();

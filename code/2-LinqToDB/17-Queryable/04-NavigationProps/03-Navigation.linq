@@ -13,19 +13,21 @@
   </Connection>
 </Query>
 
+var db = new NorthwindDbContext();
+
+// Use navigation properties to drill into sub collections.
+// Represented as DbSet<T> properties.
 
 
-	var q1 = from p in Products
-					 select new {p.ProductName, p.UnitPrice};
-		q1.Dump();
 
-	var q2 = from p in Products
-						 group p by p.ProductName.Substring(0,1) into g
-						 select g;			 
+var q1 = db.Customers.Where(c => c.CompanyName.StartsWith("T")).Where(c => c.Orders.Count >2).Select(c=>c);
+
+ 
+ q1.Dump();
+ 
+var q2 =  from c in db.Customers
+					let orderCount = c.Orders.Count( )
+					where orderCount >200
+					orderby c.CompanyName
+					select new {c.CompanyName, orderCount};
 	q2.Dump();
-
-	var q3 = from p in Products
-					 select new {p.ProductName, p.UnitPrice} into pGroup
-					 group pGroup by pGroup.ProductName.Substring(0, 1) into g
-					 select g;
-	q3.Dump();

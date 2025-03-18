@@ -22,7 +22,9 @@ var context = new NorthwindDbContext();
 // public virtual DbSet<Region> Regions { get; set; }
 // a row in the Regions table is mapped to the Region class
 
- context.Regions.Dump();
- var regionRow = context.Regions.First();
+ 
+ var allRegions = context.Regions;
+ allRegions.Dump();
+ var regionRow = allRegions.First();
  regionRow.Dump();
  
