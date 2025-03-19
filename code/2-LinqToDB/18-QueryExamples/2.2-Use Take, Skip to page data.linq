@@ -1,12 +1,12 @@
 <Query Kind="Statements">
   <Connection>
-    <ID>ed9c21bd-aa27-4ba0-97a6-40816b8ea640</ID>
+    <ID>b8c4dc23-131e-4b0f-8c01-82a9e2f816a6</ID>
     <NamingServiceVersion>2</NamingServiceVersion>
     <Persist>true</Persist>
     <Driver Assembly="EF7Driver" PublicKeyToken="469b5aa5a4331a8c">EF7Driver.StaticDriver</Driver>
     <CustomAssemblyPath>D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\DataDepot\DataDepot.dll</CustomAssemblyPath>
     <AppConfigPath>D:\repos\LearnItLabs\Linq-Complete\code\Data\Assemblies\DataDepot\appsettings.json</AppConfigPath>
-    <CustomTypeName>ToursLib.Models.ToursDbContext</CustomTypeName>
+    <CustomTypeName>NorthwindLib.Models.NorthwindDbContext</CustomTypeName>
     <DriverData>
       <UseDbContextOptions>false</UseDbContextOptions>
     </DriverData>
@@ -18,8 +18,9 @@
 // Take: Returns contiguous elements from the start of a sequence.
 // Skip: Bypasses elements in a sequence and then returns the remaining elements.
 var q1 = from p in Products
-				 orderby p.ProductID
-				 select new { p.ProductID, p.ProductName, p.UnitPrice };
+				 orderby p.ProductName	
+				 where p.UnitPrice < 30
+				 select new { p.ProductId, p.ProductName, p.UnitPrice };
 
 var count = q1.Count();
 
