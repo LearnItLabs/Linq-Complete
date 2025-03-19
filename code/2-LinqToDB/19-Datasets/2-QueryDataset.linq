@@ -11,9 +11,11 @@
 // add System.Data.Common and Microsoft.Data.SqlClient NuGet package for SQL database.
 
 // This example uses a Sqlite database, so add Microsoft.Data.Sqlite NuGet package.
+// use code from the util-source file
+#load "2-LinqToDB\19-Datasets\Util-Source"
 void Main()
 {
-	string cnString = @"data source='D:\repos\LearnItLabs\Linq-Complete\code\Data\Sqlite\northwind.sqlite'";
+	string cnString = GetSqliteConnString();
 
 	using (var conn = new SQLiteConnection(cnString))
 	{
@@ -22,9 +24,10 @@ void Main()
 		var ds = GetDataSet(conn);
 
 		//ds.Dump();
-
+		// LINQ to Datasets is based on LINQ to Objects.
+		// Convert the DataTable to an IEnumerable<DataRow> with .AsEnumerable
 		var shippers = ds.Tables["Shippers"].AsEnumerable();
-		
+		shippers.Dump();
 		shippers.First().Dump();
 		conn.Close();
 
@@ -32,15 +35,3 @@ void Main()
 }
 
 
-public DataSet GetDataSet(SQLiteConnection conn)
-{
-	var dataSet = new DataSet("NorthwindDemo");
-	var shippersAdapter= new SQLiteDataAdapter("Select * From Shippers", conn);
-	shippersAdapter.Fill(dataSet, "Shippers");
-	var productsAdapter = new SQLiteDataAdapter("Select [ProductName],[UnitPrice], [UnitsInStock]From Products ", conn);
-	productsAdapter.Fill(dataSet, "Products");
-	
-	
-	return dataSet;
-
-}
