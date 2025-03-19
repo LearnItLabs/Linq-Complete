@@ -13,21 +13,21 @@
   </Connection>
 </Query>
 
+// get orders in date range
 
-//  use results of a query as arguments to another query
+	TimeSpan thirtyDays = TimeSpan.FromDays(30);
 
-
-	var q1 = from p in Products
-					 where p.UnitPrice > 90
-					 select p.ProductID;
+	// get an order
+	var q1 = from o in Orders
+			 where o.OrderId == 10250
+			select new {o.OrderId, o.OrderDate, o.ShipName};
 
 	q1.Dump();
 
-	OrderDetails.Take(10).Dump();
+	var originalDate = q1.First().OrderDate;
+	var futureDate = originalDate + thirtyDays;
+	var q2= from o in Orders
+			where o.OrderDate > originalDate && o.OrderDate < futureDate
+			select new {o.OrderId, o.OrderDate, o.ShipName};
 
-	var productIds= q1.ToList();
-	var q2 = from o in OrderDetails
-					
-					 where productIds.Contains(o.Product.ProductID)
-					 select o;
 	q2.Dump();

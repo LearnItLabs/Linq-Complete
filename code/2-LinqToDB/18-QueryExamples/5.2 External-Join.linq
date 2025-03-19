@@ -13,21 +13,13 @@
   </Connection>
 </Query>
 
-// get orders in date range
+// Assume these product IDs come from an external source
+var externalProductIds = new HashSet<int> { 9, 29, 38 };
 
-	TimeSpan thirtyDays = TimeSpan.FromDays(30);
+// Query OrderDetails using a join with the external list
+var q2 = from o in OrderDetails
+				 join productId in externalProductIds
+				 on o.Product.ProductId equals productId
+				 select o;
 
-	// get an order
-	var q1 = from o in Orders
-			 where o.OrderID == 10250
-			select new {o.OrderID, o.OrderDate, o.ShipName};
-
-	q1.Take(1).Dump();
-
-	var originalDate = q1.First().OrderDate;
-	var futureDate = originalDate + thirtyDays;
-	var q2= from o in Orders
-			where o.OrderDate > originalDate & o.OrderDate < futureDate
-			select new {o.OrderID, o.OrderDate, o.ShipName};
-
-	q2.Dump();
+q2.Take(10).Dump();

@@ -11,25 +11,13 @@
       <UseDbContextOptions>false</UseDbContextOptions>
     </DriverData>
   </Connection>
-  <Output>DataGrids</Output>
 </Query>
 
-// SelectMany flattens a one-many relationship
-// or saying it another way , it can ungroup nested sequences
+// Assume these product IDs come from an external source
+var externalProductIds = new HashSet<int> { 9, 29, 38 };
 
-
-Regions.Dump();
-var q1 = from r in Regions
-				 select r.Territories;
-q1.Dump("4 hashset collections in result");
-
-// how to get the third territory
-var thirdTerritory = q1.ToList()[2].FirstOrDefault();
-
-var q2 = Regions.SelectMany(r => r.Territories);
-
-q2.Select(t => new { t.TerritoryId, t.TerritoryDescription }).Dump("Flattened to a single Queryable");
-
-// get third territory
-
-q2.ElementAt(2).Dump();
+// Query OrderDetails using the external list
+var q2 = from o in OrderDetails
+				 where externalProductIds.Contains(o.Product.ProductId)
+				 select o;
+q2.Take(10).Dump();

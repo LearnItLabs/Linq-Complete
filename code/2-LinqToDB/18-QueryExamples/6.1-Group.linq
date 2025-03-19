@@ -14,18 +14,26 @@
 </Query>
 
 
-
 	var q1 = from p in Products
 					 select new {p.ProductName, p.UnitPrice};
-		q1.Dump();
+	q1.Dump();
 
-	var q2 = from p in Products
+/* 
+//The following query expressions worked in EF 6, but not newer versions
+Entity Framework translates the grouping and aggregation into SQL
+that the database can execute. Without a projection (like new { Key, Products }),
+the query cannot be mapped to a valid SQL operation.
+*/
+var q2 = from p in Products
 						 group p by p.ProductName.Substring(0,1) into g
 						 select g;			 
-	q2.Dump();
+	//q2.Dump();
 
 	var q3 = from p in Products
-					 select new {p.ProductName, p.UnitPrice} into pGroup
-					 group pGroup by pGroup.ProductName.Substring(0, 1) into g
-					 select g;
+					 group new { p.ProductName, p.UnitPrice } by p.ProductName.Substring(0,1) into g
+					 select new {
+						 Key = g.Key,
+						 Products = g.ToList()};
+
+
 	q3.Dump();
