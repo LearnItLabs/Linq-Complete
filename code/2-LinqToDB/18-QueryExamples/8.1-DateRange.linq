@@ -1,6 +1,6 @@
 <Query Kind="Statements">
   <Connection>
-    <ID>5937cd49-6dbe-4750-96bb-da714e4b6d30</ID>
+    <ID>b8c4dc23-131e-4b0f-8c01-82a9e2f816a6</ID>
     <NamingServiceVersion>2</NamingServiceVersion>
     <Persist>true</Persist>
     <Driver Assembly="EF7Driver" PublicKeyToken="469b5aa5a4331a8c">EF7Driver.StaticDriver</Driver>
@@ -28,6 +28,7 @@
 	var futureDate = originalDate + thirtyDays;
 	var q2= from o in Orders
 			where o.OrderDate > originalDate && o.OrderDate < futureDate
+			orderby o.OrderDate
 			select new {o.OrderId, o.OrderDate, o.ShipName};
 
 	q2.Dump();

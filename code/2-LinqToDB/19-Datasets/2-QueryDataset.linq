@@ -27,8 +27,11 @@ void Main()
 		// LINQ to Datasets is based on LINQ to Objects.
 		// Convert the DataTable to an IEnumerable<DataRow> with .AsEnumerable
 		var shippers = ds.Tables["Shippers"].AsEnumerable();
+		var regions = ds.Tables["Regions"].AsEnumerable();
+		shippers.ElementAt(1).Dump();
 		shippers.Dump();
-		shippers.First().Dump();
+		
+		regions.Dump();
 		conn.Close();
 
 	}
