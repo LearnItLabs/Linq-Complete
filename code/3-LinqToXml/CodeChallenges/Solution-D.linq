@@ -1,6 +1,6 @@
 <Query Kind="Program" />
 
-#region Load WebColors xml file
+#region Load WebColorsA.xml file
 
 void Main()
 {

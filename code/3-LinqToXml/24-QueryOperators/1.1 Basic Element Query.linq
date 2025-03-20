@@ -11,6 +11,6 @@ var collectibles = XElement.Load(root + upPath + path);
 // collectibles.Dump();
 
 var q = from card in collectibles.Elements()
-		select card;
+				select card;
 		
 q.Dump();

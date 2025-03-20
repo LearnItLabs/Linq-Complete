@@ -1,6 +1,6 @@
 <Query Kind="Statements" />
 
-#region Load WebColors xml file
+#region Load WebColorsB.xml file
 var root = Path.GetDirectoryName(Util.CurrentQueryPath);
 var upPath = @"\..\..\Data\XML\";
 var path = @"WebColorsB.xml";

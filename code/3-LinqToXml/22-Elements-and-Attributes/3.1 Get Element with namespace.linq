@@ -1,6 +1,6 @@
 <Query Kind="Statements" />
 
-#region Load BigStarCollectibles xml file
+#region Load BigStar.xml file
 var root = Path.GetDirectoryName(Util.CurrentQueryPath);
 	var upPath = @"\..\..\Data\XML\";
 var path = @"BigStar.xml";

@@ -14,3 +14,4 @@ XNamespace theNamespace = collectibles.GetNamespaceOfPrefix("bigstar");
 //collectibles.Dump();
 var firstCard = collectibles.Element(theNamespace + "Card");
 firstCard.Dump("The Card");
+collectibles

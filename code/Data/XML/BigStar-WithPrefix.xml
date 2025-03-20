@@ -7,7 +7,8 @@
      <Cards> represent a cards in collectible deck-building card games
 -->
 
-<bigstar:Collectibles xmlns:bigstar="http://bigstarcollectibles.com/course-examples"
+<bigstar:Collectibles xmlns="http://bigstarcollectibles.com/" 
+											xmlns:bigstar="http://bigstarcollectibles.com/course-examples"
 											xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 											xsi:schemaLocation="bigstarcollectibles.com/course-examples BigStarCollectibles.xsd" >
 
