@@ -8,3 +8,5 @@ Northwind.xml
 WebColorsA.xml
 WebColorsB.xml
 WebColorsSimple.xml
+
+BigStar-Default-NS.xml

@@ -8,7 +8,7 @@ var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
 // to simplify examples in the remainder of the course
-// we'll use the non schema file.
+// we'll use the null namespace file.
 
 // Element returns a single element
 
