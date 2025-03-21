@@ -18,17 +18,23 @@ firstCard.Dump();
 A sibling refers to elements that share the same parent element within the XML hierarchy.
 <family>
   <parent>
-    <child1>John</child1> <== sibling
-    <child2>Jane</child2> <== sibling
-    <child3>Mike</child3> <== sibling
+    <child1>Bartle</child1> <== sibling
+    <child2>Hiroki</child2> <== sibling
+    <child3>Shengi</child3> <== sibling
   </parent>
 </family>
 */
 
-XNode nextCard = firstCard.NextNode; // return the next sibling (in this example, the next XElement)
+XNode secondCard = firstCard.NextNode; // return the next sibling (in this example, the next XElement)
 
-nextCard.Dump();
+secondCard.Dump();
 
-nextCard = nextCard.NextNode; // return the 3rd sibling (in this example, the next XElement)
+var thirdCard = secondCard.NextNode; // return the 3rd sibling (in this example, the next XElement)
 
-nextCard.Dump();
+thirdCard.Dump();
+
+// this is also a possibility
+// Ugly but it works!
+var fourthCard = firstCard.NextNode.NextNode.NextNode;
+
+fourthCard.Dump();
