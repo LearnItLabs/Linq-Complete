@@ -1,4 +1,6 @@
-<Query Kind="Statements" />
+<Query Kind="Statements">
+  <Output>DataGrids</Output>
+</Query>
 
 #region Load WebColors xml file
 var root = Path.GetDirectoryName(Util.CurrentQueryPath);
