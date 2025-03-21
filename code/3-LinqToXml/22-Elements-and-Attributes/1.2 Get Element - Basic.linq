@@ -7,15 +7,17 @@ var path = @"BigStar.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
+// Get nested element by calling .Element on the the parent element.
+// Chain these calls
+// If <Card> or <Slogan> elements don't exist, the methods will return null.
+XElement firstSlogan = collectibles.Element("Card").Element("Slogan");
+firstSlogan.Dump();
 
-XElement firstCard = collectibles.Element("Card").Element("Slogan");
-firstCard.Dump();
 
+XNode nextSlogan = firstSlogan.NextNode; // return the next sibling (in this example, the next XElement)
 
-XNode nextCard = firstCard.NextNode; // return the next sibling (in this example, the next XElement)
+nextSlogan.Dump();
 
-nextCard.Dump();
+nextSlogan = nextSlogan.NextNode; // return the 3rd sibling (in this example, the next XElement)
 
-nextCard = nextCard.NextNode; // return the 3rd sibling (in this example, the next XElement)
-
-nextCard.Dump();
+nextSlogan.Dump();

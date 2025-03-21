@@ -3,7 +3,7 @@
 #region Load BigStar.xml file
 var root = Path.GetDirectoryName(Util.CurrentQueryPath);
 var upPath = @"\..\..\Data\XML\";
-var path = @"BigStar.xml";
+var path = @"BigStar-WithPrefix.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
@@ -12,13 +12,17 @@ var collectibles = XElement.Load(root + upPath + path);
 // For that reason an attribute is only in a namespace if it has a proper namespace prefix. 
 // To repeat: An attribute without a prefix is never in a namespace. 
 
-XNamespace theNamespace = "http://bigstarcollectibles.com/course-examples";
+XNamespace ns = "http://bigstarcollectibles.com/course-examples";
 
 
 // when the XML data uses a XSD schema namespace, 
 // the code must use the namespace to fully qualify the request for the element.
-var theCard1 = collectibles.Element(theNamespace + "Card");
-theCard1.Dump("The Card - with namespace string");
+var theCard = collectibles.Element(ns + "Card");
+theCard.Dump("The Card - with namespace string");
 
-XAttribute theAttribute = collectibles.Element(theNamespace + "Card").Attribute("card-name");
-theAttribute.Dump();
+XAttribute cardnameAttribute = theCard.Attribute("card-name");
+cardnameAttribute.Dump();
+
+//edit the rarity attribute to have a prefix (note)
+XAttribute rarityAttribute = theCard.Attribute(ns +  "rarity");
+rarityAttribute.Dump();
