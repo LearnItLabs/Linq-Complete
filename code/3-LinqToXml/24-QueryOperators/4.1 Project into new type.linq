@@ -8,22 +8,26 @@ var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
 // use the LINQ Query operators and syntax
-// use let keyword to create variables 
-// used in the query
-// this example, do subtraction on the parsed values
+// collectibles.Dump();
 var q = from card in collectibles.Elements()
 				let bid = card.Element("Prices").Element("BidPrice")
 				let cat = card.Element("Prices").Element("CatalogPrice")
-				let bidParsed = decimal.Parse(bid.Value)
-				let catParsed = decimal.Parse(cat.Value)
-				where bidParsed > 12.00M
-				select new
-				{
+
+				select new {
 					CardName = card.Attribute("card-name").Value,
-					CatalogPrice = cat.Value,
 					BidPrice = bid.Value,
-					PriceIncrease = bidParsed - catParsed
+					CatalogPrice = cat.Value,
 
 				};
 
 q.Dump();
+// alternate syntax, could be slower, due to .Descendants searching through elements.
+var q2 = from card in collectibles.Elements()
+				
+				 select new {
+					 CardName = card.Attribute("card-name").Value,
+					 BidPrice = card.Descendants("BidPrice").ElementAt(0).Value,
+					 CatalogPrice = card.Descendants("CatalogPrice").ElementAt(0).Value,
+
+				 };
+q2.Dump();

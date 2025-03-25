@@ -8,6 +8,6 @@ var collectibles = XElement.Load(root + upPath + path);
 #endregion
  // group by card-family
 var q1 = from card in collectibles.Elements()
-		 group card by card.Attribute("card-family").Value; // key selector
+				 group card by card.Attribute("card-family").Value; // key selector
 
 q1.Dump();
