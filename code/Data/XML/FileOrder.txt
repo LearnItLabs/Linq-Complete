@@ -1,5 +1,6 @@
 BigStar.xml
 BigStar-WithSchema.xml
+BigStar-Default-NS.xml
 BigStar-WithPrefix.xml
 BigStar-Default-NS.xml
 BigStar-MissingXML.xml

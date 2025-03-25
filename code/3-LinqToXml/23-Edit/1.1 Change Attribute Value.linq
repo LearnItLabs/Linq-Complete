@@ -7,14 +7,20 @@ var path = @"BigStar.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
-// return the attribute name-value pair
-XAttribute teamnameAttribute = collectibles.Element("Card").Attribute("team-name");
-teamnameAttribute.Dump("team-name attribute");
+// Get the attribute name-value pair
+XAttribute teamName = collectibles.Element("Card").Attribute("team-name");
 
-teamnameAttribute.Value.Dump("team-name value");
+teamName.Dump("team-name attribute");
+teamName.Value.Dump("team-name value");
 
-teamnameAttribute.Value = "DarkShadows";
-teamnameAttribute.Dump("team-name attribute");
+// assign a new value
+teamName.Value = "DarkShadows";
+teamName.Dump("modified attribute");
+
+// use setValue method (another way to change the value)
+teamName.SetValue("DreamShadows");
+teamName.Value.Dump("Modified  value");
+teamName.Dump("modified attribute");
 
 
-teamnameAttribute.Value.Dump("Modified team-name value");
+teamName.Value.Dump("Modified  value");
