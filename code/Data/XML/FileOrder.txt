@@ -1,5 +1,6 @@
 BigStar.xml
 BigStar-WithSchema.xml
+BigStar-Default-NS.xml
 BigStar-WithPrefix.xml
 BigStar-MissingXML.xml
 CardSimple.xml
@@ -9,4 +10,3 @@ WebColorsA.xml
 WebColorsB.xml
 WebColorsSimple.xml
 
-BigStar-Default-NS.xml
