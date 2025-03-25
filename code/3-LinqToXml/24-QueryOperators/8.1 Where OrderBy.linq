@@ -7,10 +7,7 @@ var path = @"BigStar.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
-// use the LINQ Query operators and syntax
-// use let keyword to create variables 
-// used in the query
-// this example, do subtraction on the parsed values
+// Use Order by clause
 var q = from card in collectibles.Elements()
 		let bid = card.Element("Prices").Element("BidPrice")
 		let cat = card.Element("Prices").Element("CatalogPrice")

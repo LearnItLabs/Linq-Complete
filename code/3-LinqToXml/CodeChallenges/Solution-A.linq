@@ -9,7 +9,6 @@ var allElements = XElement.Load(root + upPath + path);
 
 // My code challenge solution
 var q = from color in allElements.Elements()
-
 				select
 				new
 				{

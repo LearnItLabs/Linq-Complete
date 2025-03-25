@@ -7,10 +7,15 @@ var path = @"BigStar.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
-// use the LINQ Query operators and syntax
+// Use the LINQ query operators and query expression syntax.
 // collectibles.Dump();
 
-var q = from card in collectibles.Elements()
-				select card;
+var q1 = from card in collectibles.Elements() // get all elements
+				 select card;
 		
-q.Dump();
+q1.Dump();
+
+var q2 = from card in collectibles.Elements("Card") // get all elements
+				 select card;
+
+q2.Dump();

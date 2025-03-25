@@ -7,10 +7,11 @@ var path = @"BigStar.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
+// Use LINQ query syntax and operators.
+// "let" creates reusable variables in the query.
+// Filters by parsed BidPrice > 12.00M.
+// Selects CardName and BidPrice for output.
 
-// use let keyword to create variables 
-// used in the query
-// for this example, do subtraction on the parsed values
 var q = from card in collectibles.Elements()
 				let bid = card.Element("Prices").Element("BidPrice")
 
@@ -18,13 +19,9 @@ var q = from card in collectibles.Elements()
 				select new
 				{
 					CardName = card.Attribute("card-name").Value,
-					BidPrice = decimal.Parse(bid.Value)
+					BidPrice = bid.Value
 
 
 				};
 
 q.Dump();
-q.Sum(x => x.BidPrice).Dump("Sum");
-q.Average(x => x.BidPrice).Dump("Average");
-q.Count().Dump("Count");
-q.Count(x => x.BidPrice > 18.0M).Dump("Count, with expression");
