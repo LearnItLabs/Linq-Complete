@@ -1,6 +1,6 @@
 <Query Kind="Statements" />
 
-#region Load BigStar.xml file
+#region Load BigStar-Default-NS file
 var root = Path.GetDirectoryName(Util.CurrentQueryPath);
 	var upPath = @"\..\..\Data\XML\";
 var path = @"BigStar-Default-NS.xml"; // null namespace
