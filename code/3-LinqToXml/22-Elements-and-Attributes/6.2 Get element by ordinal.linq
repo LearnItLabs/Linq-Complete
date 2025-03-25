@@ -9,11 +9,10 @@ var collectibles = XElement.Load(root + upPath + path);
 
 // get element by ordinal value
 
-XElement firstCard = collectibles.Element("Card");
-firstCard.Dump("First");
+XElement firstSlogan = collectibles.Element("Card").Element("Slogan");
+firstSlogan.Dump("First");
 
-XElement firstCardAgain = collectibles.Elements().ElementAt(0);
-firstCardAgain.Dump("First Again");
+var slogans = collectibles.Elements("Card").Elements("Slogan");
+slogans.ElementAt(1).Dump("Second");
 
-XElement thirdCard = collectibles.Elements().ElementAt(2);
-thirdCard.Dump("Third");
+slogans.ElementAt(3).Dump("Fourth");

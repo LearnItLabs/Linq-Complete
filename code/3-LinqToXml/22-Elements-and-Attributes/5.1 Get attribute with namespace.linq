@@ -18,11 +18,14 @@ XNamespace ns = "http://bigstarcollectibles.com/course-examples";
 // when the XML data uses a XSD schema namespace, 
 // the code must use the namespace to fully qualify the request for the element.
 var theCard = collectibles.Element(ns + "Card");
-theCard.Dump("The Card - with namespace string");
+
 
 XAttribute cardnameAttribute = theCard.Attribute("card-name");
 cardnameAttribute.Dump();
 
-//edit the rarity attribute to have a prefix (note)
-XAttribute rarityAttribute = theCard.Attribute(ns +  "rarity");
+// edit the rarity attribute in the XML file to have a prefix
+XAttribute rarityAttribute = theCard.Attribute(ns + "rarity");
 rarityAttribute.Dump();
+
+
+ theCard.Dump("The Card - with namespace string");

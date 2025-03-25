@@ -12,8 +12,9 @@ var collectibles = XElement.Load(root + upPath + path);
 
 // Element returns a single element
 
-XElement firstCard = collectibles.Element("Card");
-firstCard.Dump();
+XElement firstSlogan = collectibles.Element("Card").Element("Slogan");
+//firstCard.Dump();
 
 // Elements returns a collection of child elements
-collectibles.Elements("Card").Dump();
+var slogans = collectibles.Elements("Card").Elements("Slogan");
+slogans.Dump();
