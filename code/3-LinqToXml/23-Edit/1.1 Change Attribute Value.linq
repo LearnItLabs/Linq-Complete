@@ -16,11 +16,9 @@ teamName.Value.Dump("team-name value");
 // assign a new value
 teamName.Value = "DarkShadows";
 teamName.Dump("modified attribute");
+teamName.Value.Dump("Modified  value");
 
 // use setValue method (another way to change the value)
 teamName.SetValue("DreamShadows");
-teamName.Value.Dump("Modified  value");
 teamName.Dump("modified attribute");
-
-
 teamName.Value.Dump("Modified  value");

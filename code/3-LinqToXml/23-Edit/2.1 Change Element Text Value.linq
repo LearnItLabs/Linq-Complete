@@ -9,13 +9,16 @@ var collectibles = XElement.Load(root + upPath + path);
 
 // returns the XML data (including the element tags)
 // Elements can contain content, or other elements
-var monsterElement = collectibles.Element("Card").Element("Monster");
 
-monsterElement.Dump();
-monsterElement.Value.Dump("Monster value");
+var eyeElement = collectibles.Element("Card").Element("Monster").Element("EyeCount");
+
+eyeElement.Dump("EyeCount element");
+eyeElement.Value.Dump ("EyeCount value");
+
 // change the value
-monsterElement.Value= "Replace Everything";
+eyeElement.Value = "5";
+eyeElement.Dump("Modified EyeCount element");
+eyeElement.Value.Dump ("Modified EyeCount value");
 
-monsterElement.Dump("Modified Monster element");
-monsterElement.Value.Dump("Modified Monster value");
+
 
