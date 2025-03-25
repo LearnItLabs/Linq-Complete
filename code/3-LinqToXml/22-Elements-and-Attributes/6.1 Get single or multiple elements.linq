@@ -13,8 +13,9 @@ var collectibles = XElement.Load(root + upPath + path);
 // Element returns a single element
 
 XElement firstSlogan = collectibles.Element("Card").Element("Slogan");
-//firstCard.Dump();
+// var nextNode  = firstSlogan.NextNode;
 
-// Elements returns a collection of child elements
+// Elements returns a "Filtered "collection of child elements
+// Only elements that have a matching XName
 var slogans = collectibles.Elements("Card").Elements("Slogan");
 slogans.Dump();

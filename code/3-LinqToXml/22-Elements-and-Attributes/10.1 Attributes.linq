@@ -8,4 +8,7 @@ var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
 collectibles.Element("Card").Attributes().Dump("All Card Attributes");
-collectibles.Element("Card").Attribute("team-name").Dump("team-name attribute");
+
+
+ collectibles.Elements("Card").Attributes()
+ .OrderBy(c=>c.Name.ToString()).ThenBy(c => c.Value).Dump();
