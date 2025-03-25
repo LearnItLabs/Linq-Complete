@@ -2,6 +2,7 @@ BigStar.xml
 BigStar-WithSchema.xml
 BigStar-Default-NS.xml
 BigStar-WithPrefix.xml
+BigStar-Default-NS.xml
 BigStar-MissingXML.xml
 CardSimple.xml
 CardSimple-Copy.xml
@@ -9,4 +10,3 @@ Northwind.xml
 WebColorsA.xml
 WebColorsB.xml
 WebColorsSimple.xml
-
