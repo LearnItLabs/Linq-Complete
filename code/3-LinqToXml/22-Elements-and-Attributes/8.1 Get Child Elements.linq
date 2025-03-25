@@ -8,8 +8,11 @@ var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
 // elements returns child collection
-;
-collectibles.Elements("Card").Elements("Slogan").Dump("Slogans");
 
 
-//collectibles.Elements("Card").Elements("")
+// .Elements() returns a "Filtered" collection!
+var slogans = collectibles.Elements("Card").Elements("Slogan");
+slogans.Dump();
+
+var monsters =collectibles.Elements("Card").Elements("Monster");
+monsters.Dump();
