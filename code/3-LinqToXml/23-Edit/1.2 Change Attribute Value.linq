@@ -9,15 +9,12 @@ var collectibles = XElement.Load(root + upPath + path);
 
 // Use SetAttributeValue to work with the "team-name" attribute
 XElement cardElement = collectibles.Element("Card");
-
-
-var teamnameValue = cardElement.Attribute("team-name");
-cardElement.Attributes().Dump("all Card attributes");
+var teamAttribute = cardElement.Attribute("team-name");
+cardElement.Attributes().Dump("All Card attributes");
 
 // Update the "team-name" attribute using SetAttributeValue
 cardElement.SetAttributeValue("team-name", "DarkShadows");
+cardElement.SetAttributeValue("rarity", "Common");
 
-// Dump the updated "team-name" attribute value
-string modifiedTeamnameValue = cardElement.Attribute("team-name").Value;
 cardElement.Attributes().Dump("Modified Card attributes");
 

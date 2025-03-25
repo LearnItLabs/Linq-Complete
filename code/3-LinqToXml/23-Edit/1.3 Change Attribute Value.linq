@@ -9,14 +9,12 @@ var collectibles = XElement.Load(root + upPath + path);
 
 
 XElement cardElement = collectibles.Element("Card");
-
-
 var  teamnameValue = cardElement.Attribute("team-name");
-cardElement.Attributes().Dump("all Card attributes");
+cardElement.Attributes().Dump("All Card attributes");
 
-// if attribute doesn't exist,  it is created 
+// if attribute doesn't exist,  it is created. 
 cardElement.SetAttributeValue("limited-edition", "true");
 
-// if attribute value set to null, it is removed
+// if attribute value set to null, it is removed.
 cardElement.SetAttributeValue("rarity", null);
 cardElement.Attributes().Dump("Modified Card attributes");
