@@ -11,7 +11,7 @@ var collectibles = XElement.Load(root + upPath + path);
 // get attributes
 collectibles.Element("Card").Dump();
 var q1 = from att in collectibles.Element("Card").Attributes()
-		 select att;
+		 		 select att;
 
 q1.Dump();
 
