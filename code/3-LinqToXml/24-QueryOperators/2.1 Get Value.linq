@@ -11,7 +11,6 @@ var collectibles = XElement.Load(root + upPath + path);
 
 var q1 = from bid in collectibles.Descendants("BidPrice")
 		     select bid;
-		     ;
 
 q1.Dump();
 

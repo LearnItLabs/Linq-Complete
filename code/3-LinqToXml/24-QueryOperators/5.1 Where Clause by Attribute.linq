@@ -10,12 +10,12 @@ var collectibles = XElement.Load(root + upPath + path);
 
 // collectibles.Dump();
 var q = from card in collectibles.Elements()
-				where card.Attribute("card-name").Value== "Mingle"
+				where card.Attribute("card-name").Value.StartsWith("S")
 				select new
 				{
 					CardName = card.Attribute("card-name").Value,
 					TeamName = card.Attribute("team-name").Value,
-					ElementName = card.Element("Slogan").Name,
+					Description = card.Element("Description").Value.Substring(0,25) + "...",
 					Slogan = card.Element("Slogan").Value
 				};
 

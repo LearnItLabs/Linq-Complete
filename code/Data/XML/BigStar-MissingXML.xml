@@ -79,7 +79,7 @@
 		 https://docs.microsoft.com/en-us/dotnet/api/system.xml.linq.xelement.isempty?view=net-5.0
 		-->
 		<PublishedDate></PublishedDate>
-		<ImageUri></ImageUri>
+		<ImageUri/></ImageUri>
 		<Prices>
 			<CatalogPrice>5.99</CatalogPrice>
 			<BidPrice>17.95</BidPrice>

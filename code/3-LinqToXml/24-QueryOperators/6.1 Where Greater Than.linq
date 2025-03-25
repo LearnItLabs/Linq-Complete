@@ -14,12 +14,12 @@ var collectibles = XElement.Load(root + upPath + path);
 
 var q = from card in collectibles.Elements()
 				let bid = card.Element("Prices").Element("BidPrice")
-
-				where decimal.Parse(bid.Value) > 12.00M
+				let bidParsed = decimal.Parse(bid.Value)
+				where bidParsed > 12.00M
 				select new
 				{
 					CardName = card.Attribute("card-name").Value,
-					BidPrice = bid.Value
+					BidPrice = bidParsed
 
 
 				};

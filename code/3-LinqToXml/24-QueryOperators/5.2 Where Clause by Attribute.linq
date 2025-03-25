@@ -15,7 +15,6 @@ var q = from card in collectibles.Elements()
 					CardName = card.Attribute("card-name").Value,
 					TeamName = card.Attribute("team-name").Value,
 					ElementName = card.Element("Slogan").Name,
-					Slogan = card.Element("Slogan").Value,
 					Family = card.Attribute("card-family").Value
 				};
 

@@ -27,7 +27,7 @@ var q2 = from card in collectibles.Elements()
 				 select new {
 					 CardName = card.Attribute("card-name").Value,
 					 BidPrice = card.Descendants("BidPrice").ElementAt(0).Value,
-					 CatalogPrice = card.Descendants("CatalogPrice").ElementAt(0).Value,
+					 CatalogPrice = card.Descendants("CatalogPrice").First().Value,
 
 				 };
 q2.Dump();
