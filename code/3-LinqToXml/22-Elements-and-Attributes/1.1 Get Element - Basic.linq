@@ -18,9 +18,9 @@ firstCard.Dump();
 A sibling refers to elements that share the same parent element within the XML hierarchy.
 <family>
   <parent>
-    <child1>Bartle</child1> <== sibling
-    <child2>Hiroki</child2> <== sibling
-    <child3>Shengi</child3> <== sibling
+    <child>Bartle</child> <== sibling
+    <child>Hiroki</child> <== sibling
+    <child>Shengi</child> <== sibling
   </parent>
 </family>
 */

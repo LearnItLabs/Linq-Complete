@@ -14,10 +14,10 @@ XElement firstSlogan = collectibles.Element("Card").Element("Slogan");
 firstSlogan.Dump();
 
 
-XNode nextSlogan = firstSlogan.NextNode; // return the next sibling (in this example, the next XElement)
+XNode nextElement = firstSlogan.NextNode; // return the next sibling (in this example, the next XElement)
 
-nextSlogan.Dump();
+nextElement.Dump();
 
-nextSlogan = nextSlogan.NextNode; // return the 3rd sibling (in this example, the next XElement)
+nextElement = nextElement.NextNode; // return the 3rd sibling (in this example, the next XElement)
 
-nextSlogan.Dump();
+nextElement.Dump();
