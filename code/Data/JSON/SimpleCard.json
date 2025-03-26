@@ -1,0 +1,17 @@
+{
+  "Card": {
+    "Slogan": "Double Trouble",
+    "Description": "Mingle excels at doing twice the work in half the time, with pinpoint accuracy.  These skills serve her well in her role as Senior Data Analyst for an international cloud computing company. She's also got a penchant for ballroom dance, line dancing, and pretty much any kind of activity that lets her groove to music.",
+    "PublishedDate": "2007-04-07",
+    "ImageUri": "Monster-Mingle-card.png",
+    "Prices": {
+      "CatalogPrice": 5.99,
+      "BidPrice": 15.95
+    },
+    "Monster": {
+      "Antenna": false,
+      "Spikes": false,
+      "EyeCount": 2
+    }
+  }
+}
