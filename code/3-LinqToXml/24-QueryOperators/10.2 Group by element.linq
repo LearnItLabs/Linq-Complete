@@ -10,9 +10,9 @@ var collectibles = XElement.Load(root + upPath + path);
 
 var q1 = from card in collectibles.Elements()
 				 let cat = card.Descendants("CatalogPrice")
-				 let answer = new {CardName = card.Attribute("card-name").Value,
-				 									 CatalogPrice = cat.First().Value							}
-				 group answer by answer.CatalogPrice
+				 let cardShort = new {CardName = card.Attribute("card-name").Value,
+				 									    CatalogPrice = cat.First().Value}
+				 group cardShort by cardShort.CatalogPrice
 
 				 into catGroup
 				 orderby catGroup.Key descending
