@@ -1,0 +1,112 @@
+{
+  "Collectibles": {
+    "Card": [
+      {
+        "CardName": "Mingle",
+				"Slogan": "Double Trouble",
+        "Description": "Mingle excels at doing twice the work in half the time, with pinpoint accuracy.  These skills serve her well in her role as Senior Data Analyst for an international cloud computing company. She's also got a penchant for ballroom dance, line dancing, and pretty much any kind of activity that lets her groove to music.",
+        "PublishedDate": "2007-04-07",
+        "ImageUri": "Monster-Mingle-card.png",
+        "Prices": {
+          "CatalogPrice": 5.99,
+          "BidPrice": 15.95
+        },
+        "Monster": {
+          "Antenna": false,
+          "Spikes": false,
+          "EyeCount": 2
+        }
+      },
+      {
+				"CardName":"Yodel",
+        "Slogan": "Yodelay Hee Hoo!",
+        "Description": "Yodel grew up in a family of singers and loud talkers and could never get a word in edgewise. Then his vast talent for yodeling emerged. Now he performs to adoring fans throughout the world, and always has the loudest voice at the dinner table. Incidentally, he's also a loud proponent of net neutrality, and spends countless hours moderating an internet forum devoted solely to that subject.",
+        "PublishedDate": "2018-05-05",
+        "ImageUri": "Monster-Mingle-card.png",
+        "Prices": {
+          "CatalogPrice": 5.99,
+          "BidPrice": 6.95
+        },
+        "Monster": {
+          "Antenna": false,
+          "Spikes": true,
+          "EyeCount": 2
+        }
+      },
+      {
+			  "CardName":"Squido",
+        "Slogan": "An Eye for Design",
+        "Description": "Squido's got his hands or rather tentacles, in everything. First and foremost, he's a web designer with an eye for visual aesthetics, but he's also rather keen on UX design and making sure what he creates translates optimally to the end user. In his off-hours he's an avid nature photographer and bowler.",
+        "PublishedDate": "2014-07-05",
+        "ImageUri": "Monster-Squido-card.png",
+        "Prices": {
+          "CatalogPrice": 2.99,
+          "BidPrice": 13.95
+        },
+        "Monster": {
+          "Antenna": false,
+          "Spikes": true,
+          "EyeCount": 2
+        }
+      },
+      {
+				"CardName":"Skedaddle",
+        "Slogan": "Game of Life",
+        "Description": "When Skedaddle was a teenager, his parents couldn't keep him away from his Game Boy. In fact, they seriously worried that he might not find a suitable career.  Now as a prominent game developer for Red30 Tech, he's found his true calling…and put his family's worries to rest. You probably could have guessed this, but in his spare time Skedaddle loves to pay computer games.",
+        "PublishedDate": "2019-10-28",
+        "ImageUri": "Monster-Skedaddle-card.png",
+        "Prices": {
+          "CatalogPrice": 7.99,
+          "BidPrice": 26.95
+        },
+        "Monster": {
+          "Antenna": false,
+          "Spikes": false,
+          "EyeCount": 1
+        }
+      },
+      {
+				"CardName":"Rex",
+        "Slogan": "Great Microcontrollers Think Alike",
+        "Description": "Rex is the Mayor of Binaryville, and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town, where many famous and influential robots before him were conceived.",
+        "PublishedDate": "2016-09-16",
+        "ImageUri": "Robot-Rex-card.png",
+        "Prices": {
+          "CatalogPrice": 5.99,
+          "BidPrice": 17.95
+        },
+        "Robot": {
+          "PowerSource": "Battery"
+        }
+      },
+      {
+				"CardName":"Rivet",
+        "Slogan": "Hauling mud since 2012",
+        "Description": "Rivet descended from an assembly line of amphibious robots, but never quite took to deep water - though he does love rolling around in mucky marshes and soaking up the mud on vacation. With his advanced temperature sensors and all-weather construction, he's often dispatched to remote regions all around the world to help with disaster relief work.",
+        "PublishedDate": "2016-09-16",
+        "ImageUri": "Robot-Rivet-card.png",
+        "Prices": {
+          "CatalogPrice": 6.99,
+          "BidPrice": 3.95
+        },
+        "Robot": {
+          "PowerSource": "Fission"
+        }
+      },
+      {
+				"CardName":"Cosmo",
+        "Slogan": "To Mars and back",
+        "Description": "For an esteemed aeronautical engineer who manned the first ever flight to Mars from Binaryville (or anywhere), Cosmo is one of the most down-to-earth folks you'll ever meet. His favorite pastimes are playing bingo, soaking up the sun at Binaryville Beach, and reading spy novels.",
+        "PublishedDate": "2017-01-03",
+        "ImageUri": "Robot-Cosmo-card.png",
+        "Prices": {
+          "CatalogPrice": 6.99,
+          "BidPrice": 33.95
+        },
+        "Robot": {
+          "PowerSource": "Solar"
+        }
+      }
+    ]
+  }
+}

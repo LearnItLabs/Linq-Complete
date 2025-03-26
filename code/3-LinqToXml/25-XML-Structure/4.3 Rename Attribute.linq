@@ -7,7 +7,7 @@ var path = @"CardSimple.xml";
 var card = XElement.Load(root + upPath + path);
 #endregion
 
-card.DumpFormatted("Original");
+card.Dump("Original");
 
 //to rename an attribute, copy, add new, remove old
 
@@ -16,4 +16,4 @@ card.Add(new XAttribute("crew", teamName));
 card.Attributes("team-name").Remove();
 
 
-card.DumpFormatted("Modified");
+card.Dump("Modified");

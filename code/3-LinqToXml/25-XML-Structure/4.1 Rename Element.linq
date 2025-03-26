@@ -7,8 +7,8 @@ var path = @"CardSimple.xml";
 var card = XElement.Load(root + upPath + path);
 #endregion
 
-card.DumpFormatted("Original");
+card.Dump("Original");
 
 
 card.Element ("PublishedDate").Name = "ReleaseDate";
-card.DumpFormatted("Modified");
+card.Dump("Modified");
