@@ -20,7 +20,7 @@ var q1 = from card in collectibles.Elements()
 		 {
 		 	Count = count,
 			Team = teams.Key,
-		 	x =  teams.Select(t =>t.Attributes("card-name") )		
+		 	TeamCollection =  teams.Select(t =>t.Attribute("card-name") )		
 		 }
 		 ; 
 
