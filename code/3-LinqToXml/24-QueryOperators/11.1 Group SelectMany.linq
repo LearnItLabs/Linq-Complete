@@ -15,13 +15,12 @@ var q1 = from card in collectibles.Elements()
 		 into teams
 		 let count = teams.Count()
 		 orderby count
+		 
 		 select new
 		 {
 		 	Count = count,
 			Team = teams.Key,
-		 	x =  teams.Select(t =>t.Attributes("card-name") )
-			 
-			
+		 	x =  teams.Select(t =>t.Attributes("card-name") )		
 		 }
 		 ; 
 

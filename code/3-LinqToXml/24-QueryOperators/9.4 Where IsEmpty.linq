@@ -7,17 +7,16 @@ var path = @"BigStar-MissingXML.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 
-	// bad data in the XML file
+// XML file contains empty elements.
+// It also contains elements with zero length content.
 
 var q = from card in collectibles.Elements()
 		let bidElement = card.Element("Prices").Element("BidPrice")
 		let catElement = card.Element("Prices").Element("CatalogPrice")
-		//
-		let bidValue = bidElement.Value
-		let catValue = catElement.Value
+
 		
-		//let bidValue = bidElement.IsEmpty ? "missing" : card.Element("Prices").Element("BidPrice").Value
-		//let catValue = catElement.IsEmpty ? "missing" : card.Element("Prices").Element("CatalogPrice").Value
+		let bidValue = bidElement.IsEmpty ? "missing" : card.Element("Prices").Element("BidPrice").Value
+		let catValue = catElement.IsEmpty ? "missing" : card.Element("Prices").Element("CatalogPrice").Value
 
 		select new
 		{

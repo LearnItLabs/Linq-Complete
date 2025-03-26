@@ -12,18 +12,13 @@ var collectibles = XElement.Load(root + upPath + path);
 
 var q = from card in collectibles.Elements()
 		let pubElement = card.Element("PublishedDate")
-	
-		// let pubValue = pubElement.Value
-		// Can't parse an empty string
-		// let parsedDate = DateTime.Parse(pubValue)
-		let pubValue = String.IsNullOrEmpty(pubElement.Value) ? "missing" : card.Element("PublishedDate").Value
-		
+		let pubValue = pubElement.Value
 
 		select new
 		{
 			CardName = card.Attribute("card-name").Value,
 			PublishedDate = pubValue,
-			ParsedDate = pubValue,
+			
 			PublishedElement = pubElement,
 		
 			PublishedIsEmpty = pubElement.IsEmpty,

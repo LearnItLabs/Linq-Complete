@@ -11,23 +11,21 @@ var collectibles = XElement.Load(root + upPath + path);
 // It also contains elements with zero length content.
 
 var q = from card in collectibles.Elements()
-		let pubElement = card.Element("PublishedDate")
-	
-		// let pubValue = pubElement.Value
-		// Can't parse an empty string
-		// let parsedDate = DateTime.Parse(pubValue)
-		let pubValue = String.IsNullOrEmpty(pubElement.Value) ? "missing" : card.Element("PublishedDate").Value
-		
-
+		let bidElement = card.Element("Prices").Element("BidPrice")
+		let catElement = card.Element("Prices").Element("CatalogPrice")
+		//
+		let bidValue = bidElement.Value
+		let catValue = catElement.Value
 		select new
 		{
 			CardName = card.Attribute("card-name").Value,
-			PublishedDate = pubValue,
-			ParsedDate = pubValue,
-			PublishedElement = pubElement,
-		
-			PublishedIsEmpty = pubElement.IsEmpty,
-			ZeroLength = String.IsNullOrEmpty(pubValue)
+			BidPrice = bidValue,
+			CatalogPrice = catValue,
+			
+			BidPriceElement = bidElement,
+			CatalogPriceElement = catElement,
+			BidIsEmpty = bidElement.IsEmpty,
+			CatalogIsEmpty = catElement.IsEmpty
 		};
 
 	q.Dump();

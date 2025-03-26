@@ -16,6 +16,7 @@ var q1 = from card in collectibles.Elements()
 		 let count = teams.Count()
 		 let 	Cards = teams.SelectMany(t => t.Attributes("card-name"))
 		 orderby count
+		
 		 select new
 		 {
 		 	Count = count,
