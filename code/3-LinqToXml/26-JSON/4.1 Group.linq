@@ -19,13 +19,14 @@ var q = from card in collectibles["Collectibles"]["Card"]
 				let cat = card["Prices"]["CatalogPrice"]
 				let cardShort = new {
 					CardName = (string)card["CardName"],
-					CatalogPrice = (string)cat
+					CatalogPrice = (decimal)cat
 				}
 				 group cardShort by cardShort.CatalogPrice
 				 into catGroup
 				 orderby catGroup.Key descending
 				select new { PriceKey = catGroup.Key, CardName = catGroup.Select(g => g.CardName) };
 q.Dump();
+
 
 // This is the XML syntax
 //var q1 = from card in collectibles.Elements()

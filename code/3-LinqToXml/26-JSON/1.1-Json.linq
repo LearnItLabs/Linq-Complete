@@ -17,11 +17,12 @@ string json = @"{
 JObject jsonObject = JObject.Parse(json);
 
 // Query JSON data using LINQ
-var typeAItems = from card in jsonObject["cards"]
-								 where (string)card["team"] == "Spooktones"
-								 select new {
-									 Name = (string)card["cardName"],
-									 Price = (double)card["price"]
-								 };
-								 
-								 typeAItems.Dump();
+var q = from card in jsonObject["cards"]
+				where (string)card["team"] == "Spooktones"
+				select new
+				{
+					Name = (string)card["cardName"],
+					Price = (double)card["price"]
+				};
+
+q.Dump();

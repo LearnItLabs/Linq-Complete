@@ -28,3 +28,17 @@ var q = from card in collectibles["Collectibles"]["Card"]
 q.Dump();
 
 q.Sum(c =>c.CatalogPrice ).Dump();
+
+/*  XML syntax
+var q = from card in collectibles.Elements()
+				let bid = card.Element("Prices").Element("BidPrice")
+				let cat = card.Element("Prices").Element("CatalogPrice")
+
+				select new {
+					CardName = card.Attribute("card-name").Value,
+					BidPrice = bid.Value,
+					CatalogPrice = cat.Value,
+
+				};
+
+*/
