@@ -7,12 +7,16 @@ var path = @"BigStar.xml";
 var collectibles = XElement.Load(root + upPath + path);
 #endregion
 // group by Element
-var q1 = from price in collectibles.Descendants("Prices")
-				 group price by price.Element("CatalogPrice").Value
-				 
-				 into catPrices
-				 orderby catPrices.Key descending
-				 select new {catPrices.Key, catPrices};	
+
+var q1 = from card in collectibles.Elements()
+				 let cat = card.Descendants("CatalogPrice")
+				 let answer = new {CardName = card.Attribute("card-name").Value,
+				 									 CatalogPrice = cat.First().Value							}
+				 group answer by answer.CatalogPrice
+
+				 into catGroup
+				 orderby catGroup.Key descending
+				 select new {PriceKey=catGroup.Key, CardName = catGroup.Select(g => g.CardName) 	};
 
 q1.Dump();
 
