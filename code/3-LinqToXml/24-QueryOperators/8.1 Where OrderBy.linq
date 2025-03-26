@@ -14,14 +14,13 @@ var q = from card in collectibles.Elements()
 		let bidParsed = decimal.Parse(bid.Value)
 		let catParsed = decimal.Parse(cat.Value)
 		 
-		orderby bidParsed descending
+		orderby bidParsed 
 		select new
 		{
 			CardName = card.Attribute("card-name").Value,
 			CatalogPrice = cat.Value,
 			BidPrice = bid.Value
-			
-
+		
 		};
 
 q.Dump();
