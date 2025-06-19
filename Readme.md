@@ -27,7 +27,8 @@ For this course the instructor uses LINQPad V8, and Visual Studio 2022, any edit
 Learn-it Labs is a boutique video training company based in the Seattle area. Founded by Walt Ritscher, a long-time LinkedIn Learning staff instructor, Learn-it Labs is dedicated to creating world-class, video-based courses on a wide range of technology topics.
 See all [Learn-it Lab courses](https://www.linkedin.com/learning/instructors/learn-it-labs).
 
-Check out Walt's other [other courses](https://www.linkedin.com/learning/instructors/walt-ritscher) on LinkedIn Learning.  Follow on [LinkedIn](https://www.linkedin.com/in/waltritscher/?trk=lil_course) and [BlueSky](https://bsky.app/profile/waltritscher.bsky.social). 
+Check out Walt's [newest courses](https://www.linkedin.com/learning/instructors/learn-it-labs) 
+and  [other courses](https://www.linkedin.com/learning/instructors/walt-ritscher) on LinkedIn Learning.  Follow on [LinkedIn](https://www.linkedin.com/in/waltritscher/?trk=lil_course) and [BlueSky](https://bsky.app/profile/waltritscher.bsky.social). 
 
 
 
