@@ -31,4 +31,4 @@ Check out Walt's other [other courses](https://www.linkedin.com/learning/instruc
 
 
 
-[lil-course-url]: /
+[lil-course-url]: https://www.linkedin.com/learning/complete-guide-to-dot-net-linq-querying-collections-databases-and-markup
